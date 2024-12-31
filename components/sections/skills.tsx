@@ -6,7 +6,10 @@ import {
   Brain,
   Database, 
   Layout,
-  Terminal
+  Terminal,
+  Book,
+  Users,
+  PenTool
 } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
 
@@ -15,40 +18,70 @@ const skillCategories = [
     name: "AI & Machine Learning",
     icon: Brain,
     skills: [
-      { name: "TensorFlow/PyTorch", level: 90 },
-      { name: "Scikit-learn", level: 85 },
-      { name: "Deep Learning", level: 80 },
-      { name: "Computer Vision", level: 75 }
+      { name: "Deep Learning", level: 85 },
+      { name: "Natural Language Processing (NLP)", level: 60 },
+      { name: "Computer Vision", level: 70 },
+      { name: "Image Processing", level: 80 },
+      { name: "Prompt Engineering", level: 75 } 
     ]
   },
   {
     name: "Data Science",
     icon: Database,
     skills: [
-      { name: "Python (Pandas/NumPy)", level: 95 },
-      { name: "Data Visualization", level: 90 },
+      { name: "Python (Pandas/NumPy)", level: 85 },
+      { name: "Exploratory Data Analysis", level: 90 },
+      { name: "Time Series Forecasting", level: 60 },
       { name: "Statistical Analysis", level: 85 },
-      { name: "SQL", level: 80 }
+      { name: "SQL", level: 60 }
     ]
   },
   {
     name: "Web Development",
     icon: Layout,
     skills: [
-      { name: "React/Next.js", level: 85 },
-      { name: "TypeScript", level: 80 },
+      { name: "React/Next.js", level: 60 },
+      { name: "TypeScript", level: 60 },
       { name: "HTML/CSS", level: 85 },
-      { name: "Tailwind CSS", level: 80 }
+      { name: "Tailwind CSS", level: 85 },
     ]
   },
   {
     name: "Tools & Technologies",
     icon: Terminal,
     skills: [
-      { name: "Git/GitHub", level: 90 },
-      { name: "Docker", level: 75 },
-      { name: "AWS/Cloud", level: 70 },
-      { name: "CI/CD", level: 75 }
+      { name: "Git/GitHub", level: 75 },
+      { name: "Python Notebooks (Jupyter/Colab)", level: 85 },
+      { name: "Large Language Models (LLMs)", level: 85 }, 
+    ]
+  },
+  {
+    name: "Research & Leadership",
+    icon: Book,
+    skills: [
+      { name: "Research Methodology", level: 85 },
+      { name: "Project Management", level: 65 },
+      { name: "Event Coordination", level: 75 },
+      { name: "Team Leadership", level: 70 }
+    ]
+  },
+  {
+    name: "Interpersonal Skills",
+    icon: Users,
+    skills: [
+      { name: "Communication", level: 80 },
+      { name: "Collaboration", level: 75 },
+      { name: "Problem Solving", level: 90 },
+      { name: "Adaptability", level: 85 }
+    ]
+  },
+  {
+    name: "Design & Creativity",
+    icon: PenTool,
+    skills: [
+      { name: "UI/UX Design", level: 65 },
+      { name: "Graphic Design", level: 65 },
+      { name: "Prototyping", level: 65 }
     ]
   }
 ]
@@ -59,18 +92,19 @@ export function SkillsSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.3 // Stagger the animation of each card
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
-      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.5
+        duration: 0.5,
+        ease: "easeOut"
       }
     }
   }
@@ -98,7 +132,7 @@ export function SkillsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
         >
           {skillCategories.map((category, index) => (
             <motion.div
