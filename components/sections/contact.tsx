@@ -15,20 +15,20 @@ const contactLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/yourusername",
-    username: "@yourusername"
+    href: "https://github.com/MoncefDj",
+    username: "@MoncefDj"
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/yourusername",
-    username: "Your Name"
+    href: "https://www.linkedin.com/in/moncef-djezzar/",
+    username: "Moncef Djezzar"
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:your.email@example.com",
-    username: "your.email@example.com"
+    href: "mailto:djezzar.moncef@univ-ouargla.dz",
+    username: "djezzar.moncef@univ-ouargla.dz"
   }
 ]
 
@@ -79,28 +79,29 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <Card className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card className="p-6 md:p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               {contactLinks.map((link, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
+                  className="flex"
                 >
                   <Button
                     variant="outline"
-                    className="w-full h-auto p-4 hover:bg-primary hover:text-primary-foreground"
+                    className="w-full h-32 p-4 hover:bg-primary hover:text-primary-foreground text-base flex flex-col items-center justify-center gap-2"
                     asChild
                   >
                     <a 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col items-center gap-3"
+                      className="text-center"
                     >
                       <link.icon className="h-6 w-6" />
                       <div>
                         <div className="font-medium">{link.name}</div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="text-sm text-muted-foreground break-words whitespace-normal">
                           {link.username}
                         </div>
                       </div>
@@ -120,7 +121,7 @@ export function ContactSection() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center mt-12 text-muted-foreground"
         >
-          <p>Based in Your Location • Available for Remote Work</p>
+          <p>Based in Ouargla, Algeria • Available for Remote Work</p>
         </motion.div>
       </div>
     </section>
