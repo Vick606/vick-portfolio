@@ -29,7 +29,7 @@ A modern, responsive portfolio website showcasing AI, Machine Learning, and Data
 
 2. **Install dependencies**:
    ```bash
-   cd ai-portfolio
+   cd AI-DS-Portfolio
    npm install
    ```
 
