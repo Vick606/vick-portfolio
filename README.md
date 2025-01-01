@@ -24,7 +24,7 @@ A modern, responsive portfolio website showcasing AI, Machine Learning, and Data
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/ai-portfolio.git
+   git clone https://github.com/MoncefDj/ai-portfolio.git
    ```
 
 2. **Install dependencies**:
