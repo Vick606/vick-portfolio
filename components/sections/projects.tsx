@@ -1,7 +1,6 @@
-// components/sections/projects.tsx
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import { 
   Card,
@@ -19,116 +18,144 @@ const projects = [
   {
     title: "Arabic Fake News Detection",
     description: "Used machine learning models to classify Arabic news articles as credible or non-credible.",
-    image: "/images/projects/arabic-fake-news.jpg", // Replace with actual image path
-    tags: ["Comparative Analysis", "Research", "NLP", "Machine Learning", "Deep Learning", "Exploratory Data Analysis"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "NLP"
+    image: "/images/projects/arabic-fake-news.jpg",
+    tags: ["Comparative Analysis", "Exploratory Data Analysis"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Natural%20Language%20Processing%20(NLP)/Workshop%202%20Arabic%20Natural%20Language%20Processing%20(NLP)",
+    categories: ["NLP", "Machine Learning", "Deep Learning"]
   },
   {
     title: "Car Sales Volume and Resale Price Prediction",
     description: "Evaluated and tuned machine learning models to predict car sales using features like price and size.",
-    image: "/images/projects/car-sales.jpg", // Replace with actual image path
-    tags: ["Comparative Analysis", "Hyperparameter Tuning", "Machine Learning", "Exploratory Data Analysis"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Machine Learning"
+    image: "/images/projects/car-sales.png",
+    tags: ["Comparative Analysis", "Hyperparameter Tuning", "Exploratory Data Analysis"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Machine%20Learning%20II",
+    categories: ["Machine Learning", "Data Analysis"]
   },
   {
     title: "Exploring Autoencoder Architectures",
     description: "Developed multiple autoencoder architectures for tasks like image reconstruction and denoising.",
-    image: "/images/projects/autoencoder.jpg", // Replace with actual image path
-    tags: ["Machine Learning", "Deep Learning"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Deep Learning"
+    image: "/images/projects/autoencoder.jpg",
+    tags: ["Machine Learning", "Neural Networks"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2003",
+    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
   },
   {
     title: "Sentence Auto-Complete with RNNs",
     description: "Built a sentence auto-complete system using recurrent neural networks (RNNs) with LSTM architecture.",
-    image: "/images/projects/rnn.jpg", // Replace with actual image path
-    tags: ["RNN", "NLP", "Machine Learning", "Deep Learning"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "NLP"
+    image: "/images/projects/rnn.jpg",
+    tags: ["RNN", "Neural Networks"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2004",
+    categories: ["NLP", "Machine Learning", "Deep Learning"]
   },
   {
     title: "Time Series Forecasting for Electricity Transformers",
     description: "Predicted oil temperature of electricity transformers using time series forecasting models.",
-    image: "/images/projects/time-series.jpg", // Replace with actual image path
-    tags: ["Time Series Forecasting", "Deep Learning", "Exploratory Data Analysis"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Time Series"
+    image: "/images/projects/time-series.png",
+    tags: ["Time Series Forecasting", "Exploratory Data Analysis"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Machine%20learning%20applications",
+    categories: ["Machine Learning", "Deep Learning", "Data Analysis"]
   },
   {
     title: "CNN for Ear Print Classification",
     description: "Developed a Convolutional Neural Network (CNN) for classifying ear prints.",
-    image: "/images/projects/cnn.jpg", // Replace with actual image path
-    tags: ["CNN", "Deep Learning", "Machine Learning"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Computer Vision"
+    image: "/images/projects/cnn.png",
+    tags: ["CNN", "Neural Networks"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2002",
+    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
   },
   {
     title: "MLP from Scratch for Fruit Classification",
     description: "Built a multi-layer perceptron (MLP) from scratch to classify apples and lemons.",
-    image: "/images/projects/mlp.jpg", // Replace with actual image path
-    tags: ["Artificial Neural Networks", "Deep Learning"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Deep Learning"
+    image: "/images/projects/mlp.jpg",
+    tags: ["Artificial Neural Networks"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2001",
+    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
   },
   {
     title: "Blood Vessel Segmentation",
     description: "Evaluated logistic regression and GLMs for binary segmentation of retinal blood vessel pixels.",
-    image: "/images/projects/blood-vessel.jpg", // Replace with actual image path
-    tags: ["Comparative Analysis", "Machine Learning", "Image Processing"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Image Processing"
+    image: "/images/projects/blood-vessel.png",
+    tags: ["Comparative Analysis", "Image Processing"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/2nd%20semester/Machine%20Learning%201/Workshop",
+    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
   },
   {
-    title: "Image Processing Techniques: JPEG and Fourier Transforms",
+    title: "Image Processing Techniques",
     description: "Explored image compression and frequency filtering with JPEG and Fourier transforms.",
-    image: "/images/projects/image-processing.jpg", // Replace with actual image path
-    tags: ["Machine Learning", "Image Processing"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Image Processing"
+    image: "/images/projects/image-processing.jpg",
+    tags: ["Image Processing"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/2nd%20semester/Image%20Processing%20and%20Computer%20Vision/Workshop%2002",
+    categories: ["Computer Vision"]
   },
   {
     title: "AI Nexus Website",
     description: "Developed the official website for the AI Nexus Club.",
-    image: "/images/projects/ai-nexus.jpg", // Replace with actual image path
+    image: "/images/projects/ai-nexus.jpeg",
     tags: ["Web Development", "Web Design"],
-    github: "https://github.com/MoncefD/AIMex-website",
-    category: "Web Development"
+    github: "https://github.com/MoncefDj/AINex-website",
+    categories: ["Software Development"]
   },
   {
     title: "40 Tasks to Learn Image Manipulation",
     description: "A list of 40 tasks related to image processing.",
-    image: "/images/projects/image-tasks.jpg", // Replace with actual image path
-    tags: ["Machine Learning", "Image Processing"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Image Processing"
+    image: "/images/projects/image-tasks.jpg",
+    tags: ["Image Processing"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/1st%20semester/Digital%20Image",
+    categories: ["Computer Vision"]
   },
   {
-    title: "Exploring and Visualizing Algerian Forest Fire Data",
+    title: "Exploring Algerian Forest Fire Data",
     description: "A mini-project focused on exploratory data analysis and visualization of Algerian forest fire data.",
-    image: "/images/projects/forest-fire.jpg", // Replace with actual image path
-    tags: ["Exploratory Data Analysis", "Machine Learning"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Data Analysis"
+    image: "/images/projects/forest-fire.png",
+    tags: ["Exploratory Data Analysis"],
+    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/1st%20semester/Data%20exploration%20and%20visualization",
+    categories: ["Data Analysis"]
   },
   {
-    title: "Product Stocking Optimization Desktop Application",
+    title: "Product Stocking Optimization",
     description: "A desktop application for managing hazardous materials and optimizing product stocking.",
-    image: "/images/projects/stocking-optimization.jpg", // Replace with actual image path
-    tags: ["Software Development", "Research"],
-    github: "https://github.com/MoncefD/AI-DS-Masters",
-    category: "Software Development"
+    image: "/images/projects/ipm.jpg",
+    tags: ["Software Development"],
+    github: "https://github.com/MoncefDj/IPM",
+    categories: ["Software Development"]
   }
 ]
 
-const categories = ["All", "NLP", "Machine Learning", "Deep Learning", "Time Series", "Computer Vision", "Image Processing", "Web Development", "Data Analysis", "Software Development"]
+const categoryConfig = {
+  "All": { priority: 1, description: "All projects" },
+  "Machine Learning": { priority: 2, description: "Machine learning projects" },
+  "Deep Learning": { priority: 3, description: "Neural networks and deep learning projects" },
+  "Computer Vision": { priority: 4, description: "Image processing and computer vision projects" },
+  "Data Analysis": { priority: 5, description: "Data exploration and visualization projects" },
+  "NLP": { priority: 6, description: "Natural Language Processing projects" },
+  "Software Development": { priority: 7, description: "Full-stack development projects" },
+}
 
 export function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All")
 
-  const filteredProjects = projects.filter(project => 
-    selectedCategory === "All" ? true : project.category === selectedCategory
+  const categories = useMemo(() => {
+    const counts: { [key: string]: number } = { "All": projects.length }
+    projects.forEach(project => {
+      project.categories.forEach(category => {
+        counts[category] = (counts[category] || 0) + 1
+      })
+    })
+
+    return Object.entries(categoryConfig)
+      .sort((a, b) => a[1].priority - b[1].priority)
+      .map(([category, config]) => ({
+        name: category,
+        count: counts[category] || 0,
+        ...config
+      }))
+  }, [])
+
+  const filteredProjects = useMemo(() => 
+    projects.filter(project => 
+      selectedCategory === "All" ? true : project.categories.includes(selectedCategory)
+    ),
+    [selectedCategory]
   )
 
   const containerVariants = {
@@ -136,7 +163,8 @@ export function ProjectsSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        when: "beforeChildren"
       }
     }
   }
@@ -169,16 +197,15 @@ export function ProjectsSection() {
             applications of machine learning and data analysis.
           </p>
 
-          {/* Category Filter */}
           <div className="flex flex-wrap gap-2 justify-center mb-12">
-            {categories.map((category) => (
+            {categories.map(({ name, count }) => (
               <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
+                key={name}
+                variant={selectedCategory === name ? "default" : "outline"}
+                onClick={() => setSelectedCategory(name)}
                 className="rounded-full"
               >
-                {category}
+                {name} <span className="ml-2 text-xs opacity-70">({count})</span>
               </Button>
             ))}
           </div>
@@ -187,7 +214,8 @@ export function ProjectsSection() {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
+          key={selectedCategory}
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
         >
@@ -197,13 +225,13 @@ export function ProjectsSection() {
               variants={itemVariants}
               className="h-full"
             >
-              <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden">
-                <div className="relative h-48 w-full">
+              <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden group">
+                <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <CardHeader>
@@ -212,8 +240,20 @@ export function ProjectsSection() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
+                    {project.categories.map((category, catIndex) => (
+                      <Badge 
+                        key={catIndex} 
+                        variant="secondary"
+                        className="cursor-pointer hover:bg-primary hover:text-primary-foreground"
+                        onClick={() => setSelectedCategory(category)}
+                      >
+                        {category}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary">
+                      <Badge key={tagIndex} variant="outline">
                         {tag}
                       </Badge>
                     ))}
