@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI & Data Science Portfolio
+
+A modern, responsive portfolio website showcasing AI, Machine Learning, and Data Science projects. Built with Next.js 14 and featuring a clean, professional design with dark/light mode support.
+
+## Features
+
+- **Responsive Design**: Fully optimized for all devices and screen sizes
+- **Dark/Light Theme**: Elegant theme switching with smooth transitions
+- **Project Showcase**: Filterable gallery of AI and Data Science projects
+- **Animated UI**: Smooth animations and transitions using Framer Motion
+- **Skills Section**: Visual representation of technical competencies
+- **Modern Stack**: Built with Next.js 14 and TypeScript
+
+## Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Theme**: [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/ai-portfolio.git
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Install dependencies**:
+   ```bash
+   cd ai-portfolio
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Open [http://localhost:3000](http://localhost:3000)** in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- `app/`: Next.js app directory containing pages and layouts
+- `components/`: Reusable UI components
+  - `sections/`: Main page sections (Hero, About, Projects, etc.)
+  - `ui/`: Shared UI components
+  - `layout/`: Layout components like Header
+- `lib/`: Utility functions and shared logic
+- `public/`: Static assets and images
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Update project data in `components/sections/projects.tsx`
+2. Modify skills information in `components/sections/skills.tsx`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This project is optimized for deployment on [Vercel](https://vercel.com/):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to GitHub
+2. Import your repository to Vercel
+3. Deploy and get your live portfolio website
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Built with 💙 using Next.js and TypeScript. Feel free to use this template for your own portfolio!
