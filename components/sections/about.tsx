@@ -6,7 +6,7 @@ import {
   Brain, 
   Code2, 
   Database,
-  GitBranch
+  BarChart3
 } from "lucide-react"
 
 const features = [
@@ -26,11 +26,12 @@ const features = [
     icon: Code2
   },
   {
-    title: "Version Control",
-    description: "Experience with Git and collaborative development workflows in team environments.",
-    icon: GitBranch
+    title: "Data Analytics",
+    description: "Skilled in leveraging data analytics to uncover insights and drive decision-making.",
+    icon: BarChart3
   }
 ]
+
 
 export function AboutSection() {
   const containerVariants = {
@@ -64,10 +65,10 @@ export function AboutSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <h2 className="text-3xl font-bold mb-4">My Professional Odyssey</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I&apos;m Victor Kipyegon Koech, a passionate Business Information Technology 
+            I&apos;m Victor Koech, a passionate Business Information Technology 
             professional with expertise in Python Programming, Data Analytics, 
             Generative AI, and JavaScript. I love turning complex data into meaningful 
             insights and building innovative solutions.
