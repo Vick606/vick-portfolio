@@ -90,7 +90,7 @@ const projects = [
 {
   "title": "Tesla Stock Prediction with Stacked-LSTM",
   "description": "Developed, trained, and evaluated a stacked-LSTM model to predict Tesla stocks using NumPy, Matplotlib, TensorFlow, Keras, and LSTM.",
-  "image": "/images/projects/tesla-stock-prediction.jpg", // Placeholder image link
+  "image": "/images/projects/tesla-stock-prediction.jpg",
   "tags": ["NumPy", "Matplotlib", "TensorFlow", "Keras", "LSTM"],
   "github": "https://github.com/yourusername/tesla-stock-prediction", // Placeholder link
   "categories": ["Time Series Analysis", "Deep Learning"]
