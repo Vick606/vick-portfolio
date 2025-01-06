@@ -20,7 +20,7 @@ export function HeroSection() {
     <section 
       ref={ref}
       id="home" 
-      className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0" // Added pt-16 for mobile
+      className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0"
     >
       {/* Dynamic Background with Parallax Effect */}
       <motion.div 
@@ -48,16 +48,16 @@ export function HeroSection() {
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              AI & Data Science
+              Victor Koech
             </span>
             <br />
-            Portfolio
+            My Journey in Tech and Data Science
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-            Transforming complex data into actionable insights through AI and machine learning solutions.
+          Harnessing machine learning and data analytics to solve complex real-world problems.
           </p>
           <p className="text-sm text-muted-foreground italic mb-8">
-          &quot;1% better every day&quot;
+          &quot;Innovating for a smarter tomorrow&quot;
           </p>
 
           {/* Animated CTAs (Smaller Buttons) */}
