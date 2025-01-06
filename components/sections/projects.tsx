@@ -97,7 +97,7 @@ const projects = [
 },
 {
   "title": "Mushroom Classification Using Machine Learning",
-  "description": "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Logistic Regression, Random Forest, Support Vector Machine, and Artificial Neural Networks. The analysis was conducted using Python, SQL, and various data preprocessing techniques to ensure accurate and insightful results. Key achievements included building predictive models, tuning hyperparameters, and visualizing results with confusion matrices and feature importance plots.",
+  "description": "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Logistic Regression, Random Forest, Support Vector Machine, and Artificial Neural Networks.",
   "image": "/images/projects/mushroom-classification.jpg",
   "tags": ["Logistic Regression", "Random Forest", "SVM", "ANN"],
   "github": "https://github.com/yourusername/mushroom-classification", // Placeholder link
