@@ -18,66 +18,73 @@ const skillCategories = [
     name: "Programming Languages",
     icon: Code,
     skills: [
-      { name: "Python", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "CSS", level: 75 },
-      { name: "HTML", level: 80 },
+      { name: "Python", level: 95 },
+      { name: "JavaScript", level: 90 },
+      { name: "CSS", level: 85 },
+      { name: "HTML", level: 85 },
+      { name: "SQL", level: 95 }
     ]
   },
   {
     name: "AI & Machine Learning",
     icon: Brain,
     skills: [
-      { name: "Machine Learning", level: 85 },
-      { name: "Deep Learning", level: 80 },
-      { name: "Natural Language Processing", level: 75 },
-      { name: "TensorFlow", level: 70 },
-      { name: "Keras", level: 70 }
+      { name: "Machine Learning", level: 95 },
+      { name: "Deep Learning", level: 85 },
+      { name: "Natural Language Processing", level: 80 },
+      { name: "TensorFlow", level: 80 },
+      { name: "Keras", level: 75 },
+      { name: "SPSS", level: 80 } 
     ]
   },
   {
     name: "Data Science",
     icon: Database,
     skills: [
-      { name: "Data Analytics", level: 90 },
-      { name: "NumPy", level: 85 },
-      { name: "Pandas", level: 85 },
-      { name: "Matplotlib", level: 80 },
-      { name: "Seaborn", level: 75 },
-      { name: "Scikit-Learn", level: 80 },
+      { name: "Data Analytics", level: 95 },
+      { name: "NumPy", level: 95 },
+      { name: "Pandas", level: 90 },
+      { name: "Matplotlib", level: 85 },
+      { name: "Seaborn", level: 80 },
+      { name: "Scikit-Learn", level: 85 },
+      { name: "Matlab", level: 80 } 
     ]
   },
   {
     name: "Web Development",
     icon: Layout,
     skills: [
-      { name: "JavaScript", level: 85 },
-      { name: "React", level: 75 },
-      { name: "Node.js", level: 70 },
-      { name: "HTML/CSS", level: 80 }
+      { name: "JavaScript", level: 90 },
+      { name: "React", level: 80 },
+      { name: "Node.js", level: 75 },
+      { name: "HTML/CSS", level: 85 }
     ]
   },
   {
     name: "Tools & Technologies",
     icon: Terminal,
     skills: [
-      { name: "Git/GitHub", level: 80 },
-      { name: "Power BI", level: 75 },
-      { name: "Tableau", level: 75 },
-      { name: "Excel", level: 85 },
-      { name: "Visual Studio Code", level: 80 }
+      { name: "Git/GitHub", level: 85 },
+      { name: "Power BI", level: 80 },
+      { name: "Tableau", level: 85 },
+      { name: "Excel", level: 90 },
+      { name: "Visual Studio Code", level: 85 },
+      { name: "Cisco Packet Tracer", level: 85 }
     ]
   },
   {
     name: "Research & Analysis",
     icon: Book,
     skills: [
-      { name: "Quantitative Research", level: 80 },
-      { name: "Qualitative Research", level: 75 },
-      { name: "Predictive Analytics", level: 70 }
+      { name: "Quantitative Research", level: 95 },
+      { name: "Qualitative Research", level: 90 },
+      { name: "Predictive Analytics", level: 90 },
+      { name: "Data Visualization", level: 95 }, 
+      { name: "Statistical Analysis", level: 85 } 
     ]
   }
-]
+];
+
 
 export function SkillsSection() {
   const containerVariants = {
@@ -85,7 +92,7 @@ export function SkillsSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3 // Stagger the animation of each card
+        staggerChildren: 0.3 
       }
     }
   }
