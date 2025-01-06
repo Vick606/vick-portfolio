@@ -82,7 +82,7 @@ const projects = [
 {
   "title": "EastWestAirlines Customer Clustering",
   "description": "Clustered and categorized customers using PCA, Hierarchical Clustering, and K-Means on the EastWestAirlines dataset.",
-  "image": "/images/projects/eastwestairlines-clustering.jpg", // Placeholder image link
+  "image": "/images/projects/eastwestairlines-clustering.jpg",
   "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
   "github": "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
   "categories": ["Customer Segmentation", "Machine Learning"]
