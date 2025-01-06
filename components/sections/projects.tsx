@@ -70,7 +70,15 @@ const projects = [
     tags: ["JavaScript", "Node.js", "The Odin Project"],
     github: "https://github.com/yourusername/javascript-node-odin", // Placeholder link
     categories: ["Web Development", "Software Development"]
-  }
+  },
+  {
+    "title": "Housing Dataset Analysis",
+    "description": "Analyzed housing dataset to understand customer preferences using PCA, Hierarchical Clustering, and K-Means.",
+    "image": "/images/projects/housing-dataset-analysis.jpg", // Placeholder image link
+    "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
+    "github": "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
+    "categories": ["Data Analysis", "Machine Learning"]
+}
 ];
 
 const categoryConfig = {
