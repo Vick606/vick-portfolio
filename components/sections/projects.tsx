@@ -87,6 +87,14 @@ const projects = [
   "github": "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
   "categories": ["Customer Segmentation", "Machine Learning"]
 },
+{
+  "title": "Tesla Stock Prediction with Stacked-LSTM",
+  "description": "Developed, trained, and evaluated a stacked-LSTM model to predict Tesla stocks using NumPy, Matplotlib, TensorFlow, Keras, and LSTM.",
+  "image": "/images/projects/tesla-stock-prediction.jpg", // Placeholder image link
+  "tags": ["NumPy", "Matplotlib", "TensorFlow", "Keras", "LSTM"],
+  "github": "https://github.com/yourusername/tesla-stock-prediction", // Placeholder link
+  "categories": ["Time Series Analysis", "Deep Learning"]
+},
 
 ];
 
