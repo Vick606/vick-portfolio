@@ -115,8 +115,7 @@ const categoryConfig = {
   "Software Development": { priority: 7, description: "Full-stack development projects" },
   "Climate Change": { priority: 8, description: "Climate change analysis projects" },
   "Cybersecurity": { priority: 9, description: "Cybersecurity projects" },
-  "Customer Analysis": { priority: 10, description: "Customer preference analysis projects" },
-  "Real-Time Processing": { priority: 11, description: "Real-time data processing projects" }
+  "Real-Time Processing": { priority: 10, description: "Real-time data processing projects" }
 };
 
 export function ProjectsSection() {
