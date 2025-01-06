@@ -54,7 +54,7 @@ export function HeroSection() {
             My Journey in Tech and Data Science
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-          Harnessing machine learning and data analytics to solve complex real-world problems.
+          Harnessing ML and data analytics to solve complex real-world problems.
           </p>
           <p className="text-sm text-muted-foreground italic mb-8">
           &quot;Innovating for a smarter tomorrow&quot;
