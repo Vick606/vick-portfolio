@@ -1,4 +1,3 @@
-// app/layout.tsx
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from './providers'
 import { Header } from '@/components/layout/header'
@@ -7,10 +6,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Moncef Djezzar - AI & Data Science Portfolio',
-  description: 'AI and Data Science Portfolio showcasing machine learning projects and technical expertise',
+  title: 'Victor Koech - Data Scientist & Tech Enthusiast',
+  description: 'Portfolio showcasing data science projects and technical expertise',
   icons: {
-    icon: '/favicon.ico', // Place your favicon in the public folder
+    icon: '/favicon.ico',
   }
 }
 
