@@ -42,7 +42,7 @@ const projects = [
   {
     title: "Sentiment Analysis of Tweets Using Sentiment140 Dataset",
     description: "Conducted sentiment analysis of tweets using Sentiment140 dataset (1.6 million tweets) with Logistic Regression, Random Forest, and SVM algorithms.",
-    image: "/images/projects/sentiment-analysis.jpg", // Placeholder image
+    image: "/images/projects/sentiment-analysis.jpg",
     tags: ["Sentiment Analysis", "NLP", "Logistic Regression", "Random Forest", "SVM"],
     github: "https://github.com/yourusername/sentiment-analysis-tweets", // Placeholder link
     categories: ["NLP", "Data Analysis"]
