@@ -78,7 +78,16 @@ const projects = [
     "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
     "github": "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
     "categories": ["Data Analysis", "Machine Learning"]
-}
+},
+{
+  "title": "EastWestAirlines Customer Clustering",
+  "description": "Clustered and categorized customers using PCA, Hierarchical Clustering, and K-Means on the EastWestAirlines dataset.",
+  "image": "/images/projects/eastwestairlines-clustering.jpg", // Placeholder image link
+  "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
+  "github": "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
+  "categories": ["Customer Segmentation", "Machine Learning"]
+},
+
 ];
 
 const categoryConfig = {
