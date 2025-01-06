@@ -16,108 +16,44 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "Arabic Fake News Detection",
-    description: "Used machine learning models to classify Arabic news articles as credible or non-credible.",
-    image: "/images/projects/arabic-fake-news.jpg",
-    tags: ["Comparative Analysis", "Exploratory Data Analysis"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Natural%20Language%20Processing%20(NLP)/Workshop%202%20Arabic%20Natural%20Language%20Processing%20(NLP)",
-    categories: ["NLP", "Machine Learning", "Deep Learning"]
-  },
-  {
-    title: "Car Sales Volume and Resale Price Prediction",
-    description: "Evaluated and tuned machine learning models to predict car sales using features like price and size.",
-    image: "/images/projects/car-sales.png",
-    tags: ["Comparative Analysis", "Hyperparameter Tuning", "Exploratory Data Analysis"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Machine%20Learning%20II",
+    title: "Machine Learning Loan Prediction Model",
+    description: "Developed a Machine Learning Loan Prediction Model to automate and optimize loan approval process using Logistic Regression, Decision Tree, Support Vector Machine (SVM), K-Nearest Neighbour (KNN), and Random Forest Algorithms.",
+    image: "/images/projects/loan-prediction.jpg", // Placeholder image
+    tags: ["Logistic Regression", "Decision Tree", "SVM", "KNN", "Random Forest"],
+    github: "https://github.com/yourusername/loan-prediction", // Placeholder link
     categories: ["Machine Learning", "Data Analysis"]
   },
   {
-    title: "Exploring Autoencoder Architectures",
-    description: "Developed multiple autoencoder architectures for tasks like image reconstruction and denoising.",
-    image: "/images/projects/autoencoder.jpg",
-    tags: ["Machine Learning", "Neural Networks"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2003",
-    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
+    title: "JavaScript and Node.js Projects",
+    description: "Developed various JavaScript and Node.js projects guided by The Odin Project.",
+    image: "/images/projects/javascript-node.jpg", // Placeholder image
+    tags: ["JavaScript", "Node.js"],
+    github: "https://github.com/yourusername/javascript-node-projects", // Placeholder link
+    categories: ["Web Development", "Software Development"]
   },
   {
-    title: "Sentence Auto-Complete with RNNs",
-    description: "Built a sentence auto-complete system using recurrent neural networks (RNNs) with LSTM architecture.",
-    image: "/images/projects/rnn.jpg",
-    tags: ["RNN", "Neural Networks"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2004",
-    categories: ["NLP", "Machine Learning", "Deep Learning"]
+    title: "AI Chatbot",
+    description: "Developed an AI chatbot using Python and TensorFlow. Implemented natural language processing and machine learning algorithms.",
+    image: "/images/projects/ai-chatbot.jpg", // Placeholder image
+    tags: ["Python", "TensorFlow", "NLP"],
+    github: "https://github.com/yourusername/ai-chatbot", // Placeholder link
+    categories: ["AI", "Machine Learning", "NLP"]
   },
   {
-    title: "Time Series Forecasting for Electricity Transformers",
-    description: "Predicted oil temperature of electricity transformers using time series forecasting models.",
-    image: "/images/projects/time-series.png",
-    tags: ["Time Series Forecasting", "Exploratory Data Analysis"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Machine%20learning%20applications",
-    categories: ["Machine Learning", "Deep Learning", "Data Analysis"]
+    title: "Data Visualization Dashboard",
+    description: "Created an interactive data visualization dashboard using D3.js and React. Visualized real-time data streams and analytics.",
+    image: "/images/projects/data-visualization.jpg", // Placeholder image
+    tags: ["Data Visualization", "D3.js", "React"],
+    github: "https://github.com/yourusername/data-visualization-dashboard", // Placeholder link
+    categories: ["Data Analysis", "Web Development"]
   },
   {
-    title: "CNN for Ear Print Classification",
-    description: "Developed a Convolutional Neural Network (CNN) for classifying ear prints.",
-    image: "/images/projects/cnn.png",
-    tags: ["CNN", "Neural Networks"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2002",
-    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
-  },
-  {
-    title: "MLP from Scratch for Fruit Classification",
-    description: "Built a multi-layer perceptron (MLP) from scratch to classify apples and lemons.",
-    image: "/images/projects/mlp.jpg",
-    tags: ["Artificial Neural Networks"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/3rd%20semester/Deep%20learning/Workshop%2001",
-    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
-  },
-  {
-    title: "Blood Vessel Segmentation",
-    description: "Evaluated logistic regression and GLMs for binary segmentation of retinal blood vessel pixels.",
-    image: "/images/projects/blood-vessel.png",
-    tags: ["Comparative Analysis", "Image Processing"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/2nd%20semester/Machine%20Learning%201/Workshop",
-    categories: ["Machine Learning", "Deep Learning", "Computer Vision"]
-  },
-  {
-    title: "Image Processing Techniques",
-    description: "Explored image compression and frequency filtering with JPEG and Fourier transforms.",
-    image: "/images/projects/image-processing.jpg",
-    tags: ["Image Processing"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/2nd%20semester/Image%20Processing%20and%20Computer%20Vision/Workshop%2002",
-    categories: ["Computer Vision"]
-  },
-  {
-    title: "AI Nexus Website",
-    description: "Developed the official website for the AI Nexus Club.",
-    image: "/images/projects/ai-nexus.jpeg",
-    tags: ["Web Development", "Web Design"],
-    github: "https://github.com/MoncefDj/AINex-website",
-    categories: ["Software Development"]
-  },
-  {
-    title: "40 Tasks to Learn Image Manipulation",
-    description: "A list of 40 tasks related to image processing.",
-    image: "/images/projects/image-tasks.jpg",
-    tags: ["Image Processing"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/1st%20semester/Digital%20Image",
-    categories: ["Computer Vision"]
-  },
-  {
-    title: "Exploring Algerian Forest Fire Data",
-    description: "A mini-project focused on exploratory data analysis and visualization of Algerian forest fire data.",
-    image: "/images/projects/forest-fire.png",
-    tags: ["Exploratory Data Analysis"],
-    github: "https://github.com/MoncefDj/AI-DS-Masters/tree/main/1st%20semester/Data%20exploration%20and%20visualization",
-    categories: ["Data Analysis"]
-  },
-  {
-    title: "Product Stocking Optimization",
-    description: "A desktop application for managing hazardous materials and optimizing product stocking.",
-    image: "/images/projects/ipm.jpg",
-    tags: ["Software Development"],
-    github: "https://github.com/MoncefDj/IPM",
-    categories: ["Software Development"]
+    title: "Predictive Analytics for Sales",
+    description: "Built predictive models to forecast sales performance and optimize inventory management.",
+    image: "/images/projects/sales-prediction.jpg", // Placeholder image
+    tags: ["Predictive Analytics", "Machine Learning"],
+    github: "https://github.com/yourusername/sales-prediction", // Placeholder link
+    categories: ["Machine Learning", "Data Analysis"]
   }
 ]
 
