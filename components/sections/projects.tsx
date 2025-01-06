@@ -50,7 +50,7 @@ const projects = [
   {
     title: "DDoS Detection Using Random Forest and Logistic Regression",
     description: "Developed, trained, and tested the effectiveness of Random Forest and Logistic Regression models in detecting DDoS using DDoS1-Tuesday-20-02-2018_TrafficForML_CICFlowMeter.parquet dataset.",
-    image: "/images/projects/ddos-detection.jpg", // Placeholder image
+    image: "/images/projects/ddos-detection.jpg",
     tags: ["DDoS Detection", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/ddos-detection", // Placeholder link
     categories: ["Cybersecurity", "Machine Learning"]
