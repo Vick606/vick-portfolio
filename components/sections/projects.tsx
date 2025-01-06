@@ -58,7 +58,7 @@ const projects = [
   {
     title: "Customer Preferences Analysis Using FordKa Dataset",
     description: "Conducted PCA, hierarchical clustering, and k-means to understand customer preferences in choosing and buying cars, using FordKa dataset.",
-    image: "/images/projects/fordka-analysis.jpg", // Placeholder image
+    image: "/images/projects/fordka-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
     categories: ["Customer Analysis", "Data Analysis"]
