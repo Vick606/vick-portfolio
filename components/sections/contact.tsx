@@ -1,4 +1,3 @@
-// components/sections/contact.tsx
 "use client"
 
 import { motion } from "framer-motion"
@@ -15,20 +14,20 @@ const contactLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/MoncefDj",
-    username: "@MoncefDj"
+    href: "https://github.com/Vick606",
+    username: "@Vick606"
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/moncef-djezzar/",
-    username: "Moncef Djezzar"
+    href: "https://www.linkedin.com/in/victor-koech-b69407136/",
+    username: "Victor Kipyegon Koech"
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:djezzar.moncef@univ-ouargla.dz",
-    username: "djezzar.moncef@univ-ouargla.dz"
+    href: "mailto:vickoch20@gmail.com",
+    username: "vickoch20@gmail.com"
   }
 ]
 
@@ -121,7 +120,7 @@ export function ContactSection() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center mt-12 text-muted-foreground"
         >
-          <p>Based in Ouargla, Algeria • Available for Remote Work</p>
+          <p>Based in Nairobi, Kenya • Available for Remote Work</p>
         </motion.div>
       </div>
     </section>
