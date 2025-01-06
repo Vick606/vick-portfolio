@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Traffic Density Estimation Using YOLO V8n",
     description: "Developed traffic density estimation in real-time using YOLO V8n. Used libraries such as numpy, pandas, matplotlib, seaborn, cv2, PIL, and ultralytics.",
-    image: "/images/projects/traffic-density.jpg", // Placeholder image
+    image: "/images/projects/traffic-density.jpg",
     tags: ["YOLO V8n", "Computer Vision", "Real-Time Estimation"],
     github: "https://github.com/yourusername/traffic-density-estimation", // Placeholder link
     categories: ["Computer Vision", "Real-Time Processing"]
