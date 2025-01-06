@@ -32,7 +32,7 @@ const projects = [
     categories: ["Climate Change", "Data Analysis"]
   },
   {
-    title: "Mental Health Data Exploration Competion on Kaggle",
+    title: "Mental Health Data Exploration Competition on Kaggle",
     description: "Participated in Mental Health Data Exploration project on Kaggle, using Catboost, Random Forest, and Logistic Regression. Achieved 93% accuracy.",
     image: "/images/projects/mental-health-data.jpg",
     tags: ["Mental Health", "Catboost", "Random Forest", "Logistic Regression"],
@@ -61,7 +61,7 @@ const projects = [
     image: "/images/projects/fordka-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
-    categories: ["Customer Analysis", "Data Analysis", "Machine Learning"]
+    categories: ["Data Analysis", "Machine Learning"]
   },
   {
     title: "JavaScript and Node.js Projects (Odin Project)",
@@ -69,40 +69,40 @@ const projects = [
     image: "/images/projects/odin-project.jpg",
     tags: ["JavaScript", "Node.js", "The Odin Project"],
     github: "https://github.com/yourusername/javascript-node-odin", // Placeholder link
-    categories: ["Web Development", "Software Development"]
+    categories: ["Software Development"]
   },
   {
-    "title": "Housing Dataset Analysis",
-    "description": "Analyzed housing dataset to understand customer preferences using PCA, Hierarchical Clustering, and K-Means.",
-    "image": "/images/projects/housing-dataset-analysis.jpg",
-    "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
-    "github": "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
-    "categories": ["Data Analysis", "Machine Learning"]
-},
-{
-  "title": "EastWestAirlines Customer Clustering",
-  "description": "Clustered and categorized customers using PCA, Hierarchical Clustering, and K-Means on the EastWestAirlines dataset.",
-  "image": "/images/projects/eastwestairlines-clustering.jpg",
-  "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
-  "github": "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
-  "categories": ["Customer Segmentation", "Machine Learning"]
-},
-{
-  "title": "Tesla Stock Prediction with Stacked-LSTM",
-  "description": "Developed, trained, and evaluated a stacked-LSTM model to predict Tesla stocks using NumPy, Matplotlib, TensorFlow, Keras, and LSTM.",
-  "image": "/images/projects/tesla-stock-prediction.jpg",
-  "tags": ["NumPy", "Matplotlib", "TensorFlow", "Keras", "LSTM"],
-  "github": "https://github.com/yourusername/tesla-stock-prediction", // Placeholder link
-  "categories": ["Time Series Analysis", "Deep Learning"]
-},
-{
-  "title": "Mushroom Classification Using Machine Learning",
-  "description": "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Logistic Regression, Random Forest, Support Vector Machine, and Artificial Neural Networks.",
-  "image": "/images/projects/mushroom-classification.jpg",
-  "tags": ["Logistic Regression", "Random Forest", "SVM", "ANN"],
-  "github": "https://github.com/yourusername/mushroom-classification", // Placeholder link
-  "categories": ["Classification", "Machine Learning"]
-}
+    title: "Housing Dataset Analysis",
+    description: "Analyzed housing dataset to understand customer preferences using PCA, Hierarchical Clustering, and K-Means.",
+    image: "/images/projects/housing-dataset-analysis.jpg",
+    tags: ["PCA", "Hierarchical Clustering", "K-Means"],
+    github: "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
+    categories: ["Data Analysis", "Machine Learning"]
+  },
+  {
+    title: "EastWestAirlines Customer Clustering",
+    description: "Clustered and categorized customers using PCA, Hierarchical Clustering, and K-Means on the EastWestAirlines dataset.",
+    image: "/images/projects/eastwestairlines-clustering.jpg",
+    tags: ["PCA", "Hierarchical Clustering", "K-Means"],
+    github: "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
+    categories: ["Customer Segmentation", "Machine Learning"]
+  },
+  {
+    title: "Tesla Stock Prediction with Stacked-LSTM",
+    description: "Developed, trained, and evaluated a stacked-LSTM model to predict Tesla stocks using NumPy, Matplotlib, TensorFlow, Keras, and LSTM.",
+    image: "/images/projects/tesla-stock-prediction.jpg",
+    tags: ["NumPy", "Matplotlib", "TensorFlow", "Keras", "LSTM"],
+    github: "https://github.com/yourusername/tesla-stock-prediction", // Placeholder link
+    categories: ["Time Series Analysis", "Deep Learning"]
+  },
+  {
+    title: "Mushroom Classification Using Machine Learning",
+    description: "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Logistic Regression, Random Forest, Support Vector Machine, and Artificial Neural Networks.",
+    image: "/images/projects/mushroom-classification.jpg",
+    tags: ["Logistic Regression", "Random Forest", "SVM", "ANN"],
+    github: "https://github.com/yourusername/mushroom-classification", // Placeholder link
+    categories: ["Classification", "Machine Learning"]
+  }
 ];
 
 const categoryConfig = {
@@ -115,7 +115,7 @@ const categoryConfig = {
   "Software Development": { priority: 7, description: "Full-stack development projects" },
   "Climate Change": { priority: 8, description: "Climate change analysis projects" },
   "Cybersecurity": { priority: 9, description: "Cybersecurity projects" },
-  "Real-Time Processing": { priority: 10, description: "Real-time data processing projects" }
+  "Classification": { priority: 10, description: "Classification projects" }
 };
 
 export function ProjectsSection() {
