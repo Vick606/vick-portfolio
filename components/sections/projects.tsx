@@ -34,7 +34,7 @@ const projects = [
   {
     title: "Mental Health Data Exploration Competion on Kaggle",
     description: "Participated in Mental Health Data Exploration project on Kaggle, using Catboost, Random Forest, and Logistic Regression. Achieved 93% accuracy.",
-    image: "/images/projects/mental-health-data.jpg", // Placeholder image
+    image: "/images/projects/mental-health-data.jpg",
     tags: ["Mental Health", "Catboost", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/mental-health-data-exploration", // Placeholder link
     categories: ["Data Analysis", "Machine Learning"]
