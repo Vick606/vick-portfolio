@@ -21,7 +21,7 @@ const projects = [
     image: "/images/projects/traffic-density.jpg",
     tags: ["YOLO V8n", "Computer Vision", "Real-Time Estimation"],
     github: "https://github.com/yourusername/traffic-density-estimation", // Placeholder link
-    categories: ["Computer Vision", "Real-Time Processing", "Deep Learning"]
+    categories: ["Computer Vision", "Deep Learning"]
   },
   {
     title: "Temperature Change Analysis in Kenya, Uganda, and Tanzania",
@@ -29,7 +29,7 @@ const projects = [
     image: "/images/projects/temperature-change.jpg",
     tags: ["Temperature Analysis", "Climate Change", "Data Visualization"],
     github: "https://github.com/yourusername/temperature-change-analysis", // Placeholder link
-    categories: ["Climate Change", "Data Analysis"]
+    categories: ["Climate Change", "Data Analysis", "Statistical Analysis"]
   },
   {
     title: "Mental Health Data Exploration Competition on Kaggle",
@@ -37,7 +37,7 @@ const projects = [
     image: "/images/projects/mental-health-data.jpg",
     tags: ["Mental Health", "Catboost", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/mental-health-data-exploration", // Placeholder link
-    categories: ["Data Analysis", "Machine Learning"]
+    categories: ["Data Analysis", "Machine Learning", "Statistical Analysis"]
   },
   {
     title: "Sentiment Analysis of Tweets Using Sentiment140 Dataset",
@@ -45,7 +45,7 @@ const projects = [
     image: "/images/projects/sentiment-analysis.jpg",
     tags: ["Sentiment Analysis", "NLP", "Logistic Regression", "Random Forest", "SVM"],
     github: "https://github.com/yourusername/sentiment-analysis-tweets", // Placeholder link
-    categories: ["NLP", "Data Analysis", "Machine Learning"]
+    categories: ["NLP", "Data Analysis", "Machine Learning", "Classification"]
   },
   {
     title: "DDoS Detection Using Random Forest and Logistic Regression",
@@ -53,7 +53,7 @@ const projects = [
     image: "/images/projects/ddos-detection.jpg",
     tags: ["DDoS Detection", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/ddos-detection", // Placeholder link
-    categories: ["Cybersecurity", "Machine Learning"]
+    categories: ["Cybersecurity", "Machine Learning", "Classification"]
   },
   {
     title: "Customer Preferences Analysis Using FordKa Dataset",
@@ -61,7 +61,7 @@ const projects = [
     image: "/images/projects/fordka-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
-    categories: ["Data Analysis", "Machine Learning"]
+    categories: ["Data Analysis", "Machine Learning", "Statistical Analysis"]
   },
   {
     title: "JavaScript and Node.js Projects (Odin Project)",
@@ -77,7 +77,7 @@ const projects = [
     image: "/images/projects/housing-dataset-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
-    categories: ["Data Analysis", "Machine Learning"]
+    categories: ["Data Analysis", "Machine Learning", "Statistical Analysis"]
   },
   {
     title: "EastWestAirlines Customer Clustering",
@@ -85,7 +85,7 @@ const projects = [
     image: "/images/projects/eastwestairlines-clustering.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
-    categories: ["Customer Segmentation", "Machine Learning"]
+    categories: ["Data Analysis", "Machine Learning"]
   },
   {
     title: "Tesla Stock Prediction with Stacked-LSTM",
@@ -93,7 +93,7 @@ const projects = [
     image: "/images/projects/tesla-stock-prediction.jpg",
     tags: ["NumPy", "Matplotlib", "TensorFlow", "Keras", "LSTM"],
     github: "https://github.com/yourusername/tesla-stock-prediction", // Placeholder link
-    categories: ["Time Series Analysis", "Deep Learning"]
+    categories: ["Deep Learning", "Machine Learning"]
   },
   {
     title: "Mushroom Classification Using Machine Learning",
@@ -102,6 +102,62 @@ const projects = [
     tags: ["Logistic Regression", "Random Forest", "SVM", "ANN"],
     github: "https://github.com/yourusername/mushroom-classification", // Placeholder link
     categories: ["Classification", "Machine Learning"]
+  },
+  {
+    title: "SEED Labs - Morris Attack Simulation",
+    description: "Simulated and analyzed the Morris worm, focusing on buffer overflow, self-duplication, and network propagation using nano and mini-internet setups.",
+    image: "/images/projects/morris-attack-simulation.jpg", // Placeholder image link
+    tags: ["Morris Worm", "Network Security", "Emulation"],
+    github: "https://github.com/yourusername/morris-attack-simulation", // Placeholder link
+    categories: ["Cybersecurity", "Simulation"]
+  },
+  {
+    title: "Configured a VLAN in 4 Floors using Cisco Packet Tracer",
+    description: "Configured VLANs across 4 floors with different departments, utilizing Cisco Packet Tracer for network simulation and communication.",
+    image: "/images/projects/vlan-configuration.jpg", // Placeholder image link
+    tags: ["VLAN", "Cisco Packet Tracer", "Network Configuration"],
+    github: "https://github.com/yourusername/vlan-configuration", // Placeholder link
+    categories: ["Networking", "Simulation"]
+  },
+  {
+    title: "SPSS Analysis on Gender Difference in Prescription Medication Use",
+    description: "Analyzed gender differences in prescription medication use for mental health using SPSS with statistical tests and ANOVA.",
+    image: "/images/projects/spss-analysis.jpg", // Placeholder image link
+    tags: ["SPSS", "Statistical Analysis", "Mental Health"],
+    github: "https://github.com/yourusername/spss-analysis", // Placeholder link
+    categories: ["Data Analysis", "Statistical Analysis"]
+  },
+  {
+    title: "MATLAB Simulations for Thermal Fluid Optimization",
+    description: "Conducted MATLAB simulations to test and optimize theorems for thermal fluid dynamics, improving performance and efficiency.",
+    image: "/images/projects/thermal-fluid-optimization.jpg", // Placeholder image link
+    tags: ["MATLAB", "Thermal Fluid Dynamics", "Optimization"],
+    github: "https://github.com/yourusername/thermal-fluid-optimization", // Placeholder link
+    categories: ["Simulation"]
+  },
+  {
+    title: "Library Database Development Using SQL",
+    description: "Developed and executed complex queries on a library database, including author displays, subject publishers, and overdue book costs.",
+    image: "/images/projects/library-database.jpg", // Placeholder image link
+    tags: ["SQL", "Database Development", "Queries"],
+    github: "https://github.com/yourusername/library-database", // Placeholder link
+    categories: ["SQL"]
+  },
+  {
+    title: "Library Database System Development Using SQL",
+    description: "Created ER diagrams, executed queries, and ensured functionality in a library database system using SQL.",
+    image: "/images/projects/library-system.jpg", // Placeholder image link
+    tags: ["SQL", "ER Diagram", "Database System"],
+    github: "https://github.com/yourusername/library-system", // Placeholder link
+    categories: ["SQL"]
+  },
+  {
+    title: "Loan Prediction Model Development",
+    description: "Developed a loan prediction model using ML algorithms like Logistic Regression, Decision Tree, SVM, KNN, and Random Forest to optimize the loan approval process.",
+    image: "/images/projects/loan-prediction.jpg", // Placeholder image link
+    tags: ["Loan Prediction", "ML Algorithms", "Optimization"],
+    github: "https://github.com/yourusername/loan-prediction", // Placeholder link
+    categories: ["Machine Learning", "Classification"]
   }
 ];
 
@@ -115,7 +171,11 @@ const categoryConfig = {
   "Software Development": { priority: 7, description: "Full-stack development projects" },
   "Climate Change": { priority: 8, description: "Climate change analysis projects" },
   "Cybersecurity": { priority: 9, description: "Cybersecurity projects" },
-  "Classification": { priority: 10, description: "Classification projects" }
+  "Classification": { priority: 10, description: "Classification projects" },
+  "SQL": { priority: 11, description: "SQL projects" },
+  "Simulation": { priority: 12, description: "Simulation projects" },
+  "Networking": { priority: 13, description: "Networking projects" },
+  "Statistical Analysis": { priority: 14, description: "Statistical analysis projects" }
 };
 
 export function ProjectsSection() {
