@@ -51,7 +51,7 @@ export function HeroSection() {
               Victor Koech
             </span>
             <br />
-            My Journey in Tech and Data Science
+            Portfolio
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
           Harnessing ML and data analytics to solve complex real-world problems.
