@@ -74,7 +74,7 @@ const projects = [
   {
     "title": "Housing Dataset Analysis",
     "description": "Analyzed housing dataset to understand customer preferences using PCA, Hierarchical Clustering, and K-Means.",
-    "image": "/images/projects/housing-dataset-analysis.jpg", // Placeholder image link
+    "image": "/images/projects/housing-dataset-analysis.jpg",
     "tags": ["PCA", "Hierarchical Clustering", "K-Means"],
     "github": "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
     "categories": ["Data Analysis", "Machine Learning"]
