@@ -74,7 +74,7 @@ export function Header() {
                 handleNavClick('#home')
               }}
             >
-              Moncef Djezzar
+              Victor Koech
             </Link>
           </motion.div>
 
