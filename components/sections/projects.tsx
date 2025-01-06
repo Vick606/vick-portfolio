@@ -26,7 +26,7 @@ const projects = [
   {
     title: "Temperature Change Analysis in Kenya, Uganda, and Tanzania",
     description: "Developed a classification model to analyze, visualize, and compare temperature changes in Kenya, Uganda, and Tanzania, using FAOSTAT Temperature Change dataset.",
-    image: "/images/projects/temperature-change.jpg", // Placeholder image
+    image: "/images/projects/temperature-change.jpg",
     tags: ["Temperature Analysis", "Climate Change", "Data Visualization"],
     github: "https://github.com/yourusername/temperature-change-analysis", // Placeholder link
     categories: ["Climate Change", "Data Analysis"]
