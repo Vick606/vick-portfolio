@@ -66,7 +66,7 @@ const projects = [
   {
     title: "JavaScript and Node.js Projects (Odin Project)",
     description: "Developed various projects as part of the JS and Node.js course at The Odin Project.",
-    image: "/images/projects/odin-project.jpg", // Placeholder image
+    image: "/images/projects/odin-project.jpg",
     tags: ["JavaScript", "Node.js", "The Odin Project"],
     github: "https://github.com/yourusername/javascript-node-odin", // Placeholder link
     categories: ["Web Development", "Software Development"]
