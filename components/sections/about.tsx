@@ -1,4 +1,3 @@
-// components/sections/about.tsx
 "use client"
 
 import { motion } from "framer-motion"
@@ -68,9 +67,10 @@ export function AboutSection() {
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I&apos;m a passionate AI and Data Science professional with a strong foundation 
-            in machine learning and software development. I love turning complex data 
-            into meaningful insights and building innovative solutions.
+            I&apos;m Victor Kipyegon Koech, a passionate Business Information Technology 
+            professional with expertise in Python Programming, Data Analytics, 
+            Generative AI, and JavaScript. I love turning complex data into meaningful 
+            insights and building innovative solutions.
           </p>
         </motion.div>
 
@@ -109,10 +109,11 @@ export function AboutSection() {
         >
           <h3 className="text-xl font-semibold mb-4">Background</h3>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            With several years of experience in the field, I&apos;ve worked on diverse 
-            projects ranging from predictive analytics to natural language processing. 
-            My approach combines technical expertise with a strong focus on delivering 
-            practical business value through data-driven solutions.
+            With several years of experience in the field, I&apos;ve worked on diverse projects 
+            ranging from predictive analytics to natural language processing. I have developed 
+            a Machine Learning Loan Prediction Model and various JavaScript and Node.js projects. 
+            My approach combines technical expertise with a strong focus on delivering practical 
+            business value through data-driven solutions.
           </p>
         </motion.div>
       </div>
