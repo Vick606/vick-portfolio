@@ -1,4 +1,3 @@
-// components/sections/skills.tsx
 "use client"
 
 import { motion } from "framer-motion"
@@ -9,79 +8,73 @@ import {
   Terminal,
   Book,
   Users,
-  PenTool
+  PenTool,
+  Code 
 } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
 
 const skillCategories = [
   {
+    name: "Programming Languages",
+    icon: Code,
+    skills: [
+      { name: "Python", level: 90 },
+      { name: "JavaScript", level: 85 },
+      { name: "CSS", level: 75 },
+      { name: "HTML", level: 80 },
+    ]
+  },
+  {
     name: "AI & Machine Learning",
     icon: Brain,
     skills: [
-      { name: "Deep Learning", level: 85 },
-      { name: "Natural Language Processing (NLP)", level: 60 },
-      { name: "Computer Vision", level: 70 },
-      { name: "Image Processing", level: 80 },
-      { name: "Prompt Engineering", level: 75 } 
+      { name: "Machine Learning", level: 85 },
+      { name: "Deep Learning", level: 80 },
+      { name: "Natural Language Processing", level: 75 },
+      { name: "TensorFlow", level: 70 },
+      { name: "Keras", level: 70 }
     ]
   },
   {
     name: "Data Science",
     icon: Database,
     skills: [
-      { name: "Python (Pandas/NumPy)", level: 85 },
-      { name: "Exploratory Data Analysis", level: 90 },
-      { name: "Time Series Forecasting", level: 60 },
-      { name: "Statistical Analysis", level: 85 },
-      { name: "SQL", level: 60 }
+      { name: "Data Analytics", level: 90 },
+      { name: "NumPy", level: 85 },
+      { name: "Pandas", level: 85 },
+      { name: "Matplotlib", level: 80 },
+      { name: "Seaborn", level: 75 },
+      { name: "Scikit-Learn", level: 80 },
     ]
   },
   {
     name: "Web Development",
     icon: Layout,
     skills: [
-      { name: "React/Next.js", level: 60 },
-      { name: "TypeScript", level: 60 },
-      { name: "HTML/CSS", level: 85 },
-      { name: "Tailwind CSS", level: 85 },
+      { name: "JavaScript", level: 85 },
+      { name: "React", level: 75 },
+      { name: "Node.js", level: 70 },
+      { name: "HTML/CSS", level: 80 }
     ]
   },
   {
     name: "Tools & Technologies",
     icon: Terminal,
     skills: [
-      { name: "Git/GitHub", level: 75 },
-      { name: "Python Notebooks (Jupyter/Colab)", level: 85 },
-      { name: "Large Language Models (LLMs)", level: 85 }, 
+      { name: "Git/GitHub", level: 80 },
+      { name: "Power BI", level: 75 },
+      { name: "Tableau", level: 75 },
+      { name: "Excel", level: 85 },
+      { name: "Visual Studio Code", level: 80 }
     ]
   },
   {
-    name: "Research & Leadership",
+    name: "Research & Analysis",
     icon: Book,
     skills: [
-      { name: "Research Methodology", level: 85 },
-      { name: "Project Management", level: 65 },
-      { name: "Event Coordination", level: 75 },
-      { name: "Team Leadership", level: 70 }
-    ]
-  },
-  {
-    name: "Interpersonal Skills",
-    icon: Users,
-    skills: [
-      { name: "Communication", level: 80 },
-      { name: "Collaboration", level: 75 },
-      { name: "Problem Solving", level: 90 },
-      { name: "Adaptability", level: 85 }
-    ]
-  },
-  {
-    name: "Design & Creativity",
-    icon: PenTool,
-    skills: [
-      { name: "UI/UX Design", level: 65 },
-      { name: "Graphic Design", level: 65 },
-      { name: "Prototyping", level: 65 }
+      { name: "Quantitative Research", level: 80 },
+      { name: "Qualitative Research", level: 75 },
+      { name: "Predictive Analytics", level: 70 }
     ]
   }
 ]
