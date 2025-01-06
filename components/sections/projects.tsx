@@ -97,16 +97,16 @@ const projects = [
   },
   {
     title: "Mushroom Classification Using Machine Learning",
-    description: "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Logistic Regression, Random Forest, Support Vector Machine, and Artificial Neural Networks.",
+    description: "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Support Vector Machine and Artificial Neural Networks.",
     image: "/images/projects/mushroom-classification.jpg",
     tags: ["Logistic Regression", "Random Forest", "SVM", "ANN"],
     github: "https://github.com/yourusername/mushroom-classification", // Placeholder link
-    categories: ["Classification", "Machine Learning"]
+    categories: ["Classification", "Machine Learning", "Deep Learning"]
   },
   {
     title: "SEED Labs - Morris Attack Simulation",
     description: "Simulated and analyzed the Morris worm, focusing on buffer overflow, self-duplication, and network propagation using nano and mini-internet setups.",
-    image: "/images/projects/morris-attack-simulation.jpg", // Placeholder image link
+    image: "/images/projects/morris-attack-simulation.jpg",
     tags: ["Morris Worm", "Network Security", "Emulation"],
     github: "https://github.com/yourusername/morris-attack-simulation", // Placeholder link
     categories: ["Cybersecurity", "Simulation"]
@@ -114,15 +114,15 @@ const projects = [
   {
     title: "Configured a VLAN in 4 Floors using Cisco Packet Tracer",
     description: "Configured VLANs across 4 floors with different departments, utilizing Cisco Packet Tracer for network simulation and communication.",
-    image: "/images/projects/vlan-configuration.jpg", // Placeholder image link
+    image: "/images/projects/vlan-configuration.jpg", 
     tags: ["VLAN", "Cisco Packet Tracer", "Network Configuration"],
     github: "https://github.com/yourusername/vlan-configuration", // Placeholder link
-    categories: ["Networking", "Simulation"]
+    categories: ["Networking", "Simulation", "Cybersecurity"]
   },
   {
     title: "SPSS Analysis on Gender Difference in Prescription Medication Use",
     description: "Analyzed gender differences in prescription medication use for mental health using SPSS with statistical tests and ANOVA.",
-    image: "/images/projects/spss-analysis.jpg", // Placeholder image link
+    image: "/images/projects/spss-analysis.jpg",
     tags: ["SPSS", "Statistical Analysis", "Mental Health"],
     github: "https://github.com/yourusername/spss-analysis", // Placeholder link
     categories: ["Data Analysis", "Statistical Analysis"]
@@ -130,7 +130,7 @@ const projects = [
   {
     title: "MATLAB Simulations for Thermal Fluid Optimization",
     description: "Conducted MATLAB simulations to test and optimize theorems for thermal fluid dynamics, improving performance and efficiency.",
-    image: "/images/projects/thermal-fluid-optimization.jpg", // Placeholder image link
+    image: "/images/projects/thermal-fluid-optimization.jpg", 
     tags: ["MATLAB", "Thermal Fluid Dynamics", "Optimization"],
     github: "https://github.com/yourusername/thermal-fluid-optimization", // Placeholder link
     categories: ["Simulation"]
@@ -138,7 +138,7 @@ const projects = [
   {
     title: "Library Database Development Using SQL",
     description: "Developed and executed complex queries on a library database, including author displays, subject publishers, and overdue book costs.",
-    image: "/images/projects/library-database.jpg", // Placeholder image link
+    image: "/images/projects/library-database.jpg",
     tags: ["SQL", "Database Development", "Queries"],
     github: "https://github.com/yourusername/library-database", // Placeholder link
     categories: ["SQL"]
@@ -146,7 +146,7 @@ const projects = [
   {
     title: "Library Database System Development Using SQL",
     description: "Created ER diagrams, executed queries, and ensured functionality in a library database system using SQL.",
-    image: "/images/projects/library-system.jpg", // Placeholder image link
+    image: "/images/projects/library-system.jpg",
     tags: ["SQL", "ER Diagram", "Database System"],
     github: "https://github.com/yourusername/library-system", // Placeholder link
     categories: ["SQL"]
@@ -154,7 +154,7 @@ const projects = [
   {
     title: "Loan Prediction Model Development",
     description: "Developed a loan prediction model using ML algorithms like Logistic Regression, Decision Tree, SVM, KNN, and Random Forest to optimize the loan approval process.",
-    image: "/images/projects/loan-prediction.jpg", // Placeholder image link
+    image: "/images/projects/loan-prediction.jpg", 
     tags: ["Loan Prediction", "ML Algorithms", "Optimization"],
     github: "https://github.com/yourusername/loan-prediction", // Placeholder link
     categories: ["Machine Learning", "Classification"]
