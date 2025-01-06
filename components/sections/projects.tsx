@@ -21,7 +21,7 @@ const projects = [
     image: "/images/projects/traffic-density.jpg",
     tags: ["YOLO V8n", "Computer Vision", "Real-Time Estimation"],
     github: "https://github.com/yourusername/traffic-density-estimation", // Placeholder link
-    categories: ["Computer Vision", "Real-Time Processing"]
+    categories: ["Computer Vision", "Real-Time Processing", "Deep Learning"]
   },
   {
     title: "Temperature Change Analysis in Kenya, Uganda, and Tanzania",
@@ -45,11 +45,11 @@ const projects = [
     image: "/images/projects/sentiment-analysis.jpg",
     tags: ["Sentiment Analysis", "NLP", "Logistic Regression", "Random Forest", "SVM"],
     github: "https://github.com/yourusername/sentiment-analysis-tweets", // Placeholder link
-    categories: ["NLP", "Data Analysis"]
+    categories: ["NLP", "Data Analysis", "Machine Learning"]
   },
   {
     title: "DDoS Detection Using Random Forest and Logistic Regression",
-    description: "Developed, trained, and tested the effectiveness of Random Forest and Logistic Regression models in detecting DDoS using DDoS1-Tuesday-20-02-2018_TrafficForML_CICFlowMeter.parquet dataset.",
+    description: "Developed, trained, and tested the effectiveness of Random Forest and Logistic Regression models in detecting DDoS using DDoS1-Tuesday-20-02-2018_TrafficForML dataset.",
     image: "/images/projects/ddos-detection.jpg",
     tags: ["DDoS Detection", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/ddos-detection", // Placeholder link
@@ -57,11 +57,11 @@ const projects = [
   },
   {
     title: "Customer Preferences Analysis Using FordKa Dataset",
-    description: "Conducted PCA, hierarchical clustering, and k-means to understand customer preferences in choosing and buying cars, using FordKa dataset.",
+    description: "Conducted PCA, Hierarchical Clustering, and K-means to understand customer preferences in choosing and buying cars, using FordKa dataset.",
     image: "/images/projects/fordka-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
-    categories: ["Customer Analysis", "Data Analysis"]
+    categories: ["Customer Analysis", "Data Analysis", "Machine Learning"]
   },
   {
     title: "JavaScript and Node.js Projects (Odin Project)",
