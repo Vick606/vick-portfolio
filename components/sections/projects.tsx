@@ -16,46 +16,62 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "Machine Learning Loan Prediction Model",
-    description: "Developed a Machine Learning Loan Prediction Model to automate and optimize loan approval process using Logistic Regression, Decision Tree, Support Vector Machine (SVM), K-Nearest Neighbour (KNN), and Random Forest Algorithms.",
-    image: "/images/projects/loan-prediction.jpg", // Placeholder image
-    tags: ["Logistic Regression", "Decision Tree", "SVM", "KNN", "Random Forest"],
-    github: "https://github.com/yourusername/loan-prediction", // Placeholder link
-    categories: ["Machine Learning", "Data Analysis"]
+    title: "Traffic Density Estimation Using YOLO V8n",
+    description: "Developed traffic density estimation in real-time using YOLO V8n. Used libraries such as numpy, pandas, matplotlib, seaborn, cv2, PIL, and ultralytics.",
+    image: "/images/projects/traffic-density.jpg", // Placeholder image
+    tags: ["YOLO V8n", "Computer Vision", "Real-Time Estimation"],
+    github: "https://github.com/yourusername/traffic-density-estimation", // Placeholder link
+    categories: ["Computer Vision", "Real-Time Processing"]
   },
   {
-    title: "JavaScript and Node.js Projects",
-    description: "Developed various JavaScript and Node.js projects guided by The Odin Project.",
-    image: "/images/projects/javascript-node.jpg", // Placeholder image
-    tags: ["JavaScript", "Node.js"],
-    github: "https://github.com/yourusername/javascript-node-projects", // Placeholder link
+    title: "Temperature Change Analysis in Kenya, Uganda, and Tanzania",
+    description: "Developed a classification model to analyze, visualize, and compare temperature changes in Kenya, Uganda, and Tanzania, using FAOSTAT Temperature Change dataset.",
+    image: "/images/projects/temperature-change.jpg", // Placeholder image
+    tags: ["Temperature Analysis", "Climate Change", "Data Visualization"],
+    github: "https://github.com/yourusername/temperature-change-analysis", // Placeholder link
+    categories: ["Climate Change", "Data Analysis"]
+  },
+  {
+    title: "Mental Health Data Exploration Competion on Kaggle",
+    description: "Participated in Mental Health Data Exploration project on Kaggle, using Catboost, Random Forest, and Logistic Regression. Achieved 93% accuracy.",
+    image: "/images/projects/mental-health-data.jpg", // Placeholder image
+    tags: ["Mental Health", "Catboost", "Random Forest", "Logistic Regression"],
+    github: "https://github.com/yourusername/mental-health-data-exploration", // Placeholder link
+    categories: ["Data Analysis", "Machine Learning"]
+  },
+  {
+    title: "Sentiment Analysis of Tweets Using Sentiment140 Dataset",
+    description: "Conducted sentiment analysis of tweets using Sentiment140 dataset (1.6 million tweets) with Logistic Regression, Random Forest, and SVM algorithms.",
+    image: "/images/projects/sentiment-analysis.jpg", // Placeholder image
+    tags: ["Sentiment Analysis", "NLP", "Logistic Regression", "Random Forest", "SVM"],
+    github: "https://github.com/yourusername/sentiment-analysis-tweets", // Placeholder link
+    categories: ["NLP", "Data Analysis"]
+  },
+  {
+    title: "DDoS Detection Using Random Forest and Logistic Regression",
+    description: "Developed, trained, and tested the effectiveness of Random Forest and Logistic Regression models in detecting DDoS using DDoS1-Tuesday-20-02-2018_TrafficForML_CICFlowMeter.parquet dataset.",
+    image: "/images/projects/ddos-detection.jpg", // Placeholder image
+    tags: ["DDoS Detection", "Random Forest", "Logistic Regression"],
+    github: "https://github.com/yourusername/ddos-detection", // Placeholder link
+    categories: ["Cybersecurity", "Machine Learning"]
+  },
+  {
+    title: "Customer Preferences Analysis Using FordKa Dataset",
+    description: "Conducted PCA, hierarchical clustering, and k-means to understand customer preferences in choosing and buying cars, using FordKa dataset.",
+    image: "/images/projects/fordka-analysis.jpg", // Placeholder image
+    tags: ["PCA", "Hierarchical Clustering", "K-Means"],
+    github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
+    categories: ["Customer Analysis", "Data Analysis"]
+  },
+  {
+    title: "JavaScript and Node.js Projects (Odin Project)",
+    description: "Developed various projects as part of the JS and Node.js course at The Odin Project.",
+    image: "/images/projects/odin-project.jpg", // Placeholder image
+    tags: ["JavaScript", "Node.js", "The Odin Project"],
+    github: "https://github.com/yourusername/javascript-node-odin", // Placeholder link
     categories: ["Web Development", "Software Development"]
-  },
-  {
-    title: "AI Chatbot",
-    description: "Developed an AI chatbot using Python and TensorFlow. Implemented natural language processing and machine learning algorithms.",
-    image: "/images/projects/ai-chatbot.jpg", // Placeholder image
-    tags: ["Python", "TensorFlow", "NLP"],
-    github: "https://github.com/yourusername/ai-chatbot", // Placeholder link
-    categories: ["AI", "Machine Learning", "NLP"]
-  },
-  {
-    title: "Data Visualization Dashboard",
-    description: "Created an interactive data visualization dashboard using D3.js and React. Visualized real-time data streams and analytics.",
-    image: "/images/projects/data-visualization.jpg", // Placeholder image
-    tags: ["Data Visualization", "D3.js", "React"],
-    github: "https://github.com/yourusername/data-visualization-dashboard", // Placeholder link
-    categories: ["Data Analysis", "Web Development"]
-  },
-  {
-    title: "Predictive Analytics for Sales",
-    description: "Built predictive models to forecast sales performance and optimize inventory management.",
-    image: "/images/projects/sales-prediction.jpg", // Placeholder image
-    tags: ["Predictive Analytics", "Machine Learning"],
-    github: "https://github.com/yourusername/sales-prediction", // Placeholder link
-    categories: ["Machine Learning", "Data Analysis"]
   }
-]
+];
 
 const categoryConfig = {
   "All": { priority: 1, description: "All projects" },
@@ -65,7 +81,11 @@ const categoryConfig = {
   "Data Analysis": { priority: 5, description: "Data exploration and visualization projects" },
   "NLP": { priority: 6, description: "Natural Language Processing projects" },
   "Software Development": { priority: 7, description: "Full-stack development projects" },
-}
+  "Climate Change": { priority: 8, description: "Climate change analysis projects" },
+  "Cybersecurity": { priority: 9, description: "Cybersecurity projects" },
+  "Customer Analysis": { priority: 10, description: "Customer preference analysis projects" },
+  "Real-Time Processing": { priority: 11, description: "Real-time data processing projects" }
+};
 
 export function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All")
