@@ -1,4 +1,7 @@
-# Victor Koech - Data Science & Tech Portfolio
+# Victor Koech Portfolio
+![GitHub last commit](https://img.shields.io/github/last-commit/Vick606/vick-portfolio)
+![GitHub issues](https://img.shields.io/github/issues/Vick606/vick-portfolio)
+![GitHub stars](https://img.shields.io/github/stars/Vick606/vick-portfolio)
 
 A modern, responsive portfolio website showcasing Data Science, Machine Learning, and AI projects. Built with Next.js 14 and featuring a clean, professional design with dark/light mode support.
 
@@ -44,19 +47,19 @@ npm run dev
 
 ## Project Structure
 
-app/: Next.jsapp directory containing pages and layouts
+- app/: Next.jsapp directory containing pages and layouts
 
-components/: Reusable UI components
+- components/: Reusable UI components
 
-sections/: Main page sections (Hero, About, Projects, etc.)
+- sections/: Main page sections (Hero, About, Projects, etc.)
 
-ui/: Shared UI components
+- ui/: Shared UI components
 
-layout/: Layout components like Header
+- layout/: Layout components like Header
 
-lib/: Utility functions and shared logic
+- lib/: Utility functions and shared logic
 
-public/: Static assets and images
+- public/: Static assets and images
 
 ## Customization
 Update project data in components/sections/projects.tsx
@@ -66,9 +69,9 @@ Modify skills information in components/sections/skills.tsx
 ## Deployment
 This project is optimized for deployment on Vercel:
 
-Push your code to GitHub
-Import your repository to Vercel
-Deploy and get your live portfolio website
+- Push your code to GitHub
+- Import your repository to Vercel
+- Deploy and get your live portfolio website
 
 ## License
 This project is open-source and available under the MIT License.
