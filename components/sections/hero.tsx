@@ -38,7 +38,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Split Layout Content */}
-      <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="relative z-10 container relative mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Text Content (Left on Desktop, Second on Mobile) */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -106,6 +106,7 @@ export function HeroSection() {
                 src="/images/profile.png"
                 alt="Profile"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover rounded-full z-10 filter grayscale-[50%] contrast-[110%] brightness-[90%]"
                 priority
               />
