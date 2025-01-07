@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import Image from "next/image"
 
 const certifications = [
   {
@@ -33,7 +35,8 @@ export const CertificationsSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        when: "beforeChildren"
       }
     }
   }
@@ -50,8 +53,8 @@ export const CertificationsSection = () => {
   }
 
   return (
-    <section id="certifications" className="py-12 bg-gray-100">
-      <div className="container mx-auto">
+    <section id="certifications" className="py-20 bg-secondary/30">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,26 +62,40 @@ export const CertificationsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl font-bold mb-6">Certifications</h2>
+          <h2 className="text-3xl font-bold mb-4">Certifications</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
         </motion.div>
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
           viewport={{ once: true }}
         >
           {certifications.map((cert, index) => (
-            <motion.div key={index} className="bg-white p-6 shadow-lg rounded-lg" variants={itemVariants}>
-              <img src={cert.logo} alt={`${cert.institution} logo`} className="w-16 h-16 mb-4"/>
-              <h3 className="text-xl font-semibold">{cert.courseName}</h3>
-              <p className="text-gray-600">{cert.institution} - {cert.year}</p>
-              <h4 className="text-lg font-medium mt-4">Key Concepts:</h4>
-              <ul className="list-disc pl-5">
-                {cert.keyConcepts.map((concept, idx) => (
-                  <li key={idx}>{concept}</li>
-                ))}
-              </ul>
+            <motion.div key={index} className="h-full" variants={itemVariants}>
+              <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden group">
+                <div className="relative h-16 w-16 mb-4 mx-auto">
+                  <Image
+                    src={cert.logo}
+                    alt={`${cert.institution} logo`}
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{cert.courseName}</CardTitle>
+                  <CardDescription>{cert.institution} - {cert.year}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="text-lg font-medium mt-4">Key Concepts:</h4>
+                  <ul className="list-disc pl-5">
+                    {cert.keyConcepts.map((concept, idx) => (
+                      <li key={idx}>{concept}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </motion.div>
