@@ -3,29 +3,78 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { FaGoogle, FaKaggle, FaLaptopCode } from 'react-icons/fa' // Using FaLaptopCode for IBM
+import { FaGoogle, FaKaggle, FaLaptopCode, FaGraduationCap } from 'react-icons/fa' // Using FaGraduationCap for Udemy
 
 const certifications = [
   {
-    courseName: 'Machine Learning Specialization',
-    year: 2022,
-    institution: 'Coursera',
+    courseName: 'Learn To Create AI Assistant (Jarvis) with Python',
+    year: 2024,
+    institution: 'Udemy',
+    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    keyConcepts: ['Artificial Intelligence', 'AI Assistant', 'Python', 'Speech Recognition']
+  },
+  {
+    courseName: 'Introduction to Generative AI',
+    year: 2024,
+    institution: 'Google',
     logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
-    keyConcepts: ['Supervised Learning', 'Unsupervised Learning', 'Neural Networks']
+    keyConcepts: ['Generative AI', 'Machine Learning']
   },
   {
-    courseName: 'Data Science Professional Certificate',
-    year: 2021,
-    institution: 'edX',
+    courseName: 'Generative AI for Developers',
+    year: 2024,
+    institution: 'Google',
+    logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
+    keyConcepts: ['Attention Mechanism', 'Encoder-Decoder Architecture', 'Transformer Models', 'Responsible AI']
+  },
+  {
+    courseName: 'Machine Learning Engineering',
+    year: 2024,
+    institution: 'Google',
+    logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
+    keyConcepts: ['Machine Learning', 'Google Cloud', 'Data for ML APIs', 'BigQuery ML']
+  },
+  {
+    courseName: 'Gen AI Intensive Course with Google',
+    year: 2024,
+    institution: 'Kaggle',
     logo: <FaKaggle className="w-16 h-16 text-primary mx-auto mb-4" />,
-    keyConcepts: ['Data Wrangling', 'Data Visualization', 'Statistical Analysis']
+    keyConcepts: ['Foundational LLMs', 'Prompt Engineering', 'Generative Agents', 'MLOps for Generative AI']
   },
   {
-    courseName: 'Deep Learning Specialization',
+    courseName: 'Python Bootcamp for Engineers and Scientists',
+    year: 2024,
+    institution: 'Udemy',
+    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    keyConcepts: ['Statistical Data Analysis', 'Modeling', 'Visualization']
+  },
+  {
+    courseName: 'Introduction to Data Analytics',
     year: 2023,
-    institution: 'Coursera',
-    logo: <FaLaptopCode className="w-16 h-16 text-primary mx-auto mb-4" />, // Placeholder for IBM
-    keyConcepts: ['Convolutional Networks', 'Sequence Models', 'Generative Adversarial Networks']
+    institution: 'IBM',
+    logo: <FaLaptopCode className="w-16 h-16 text-primary mx-auto mb-4" />, // Placeholder icon for IBM
+    keyConcepts: ['Data Analysis', 'Excel', 'Data Visualization', 'Data Science']
+  },
+  {
+    courseName: 'Learn Ethical Hacking from Scratch',
+    year: 2023,
+    institution: 'Udemy',
+    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    keyConcepts: ['Cybersecurity', 'Networking', 'Ethical Hacking', 'Linux']
+  },
+  {
+    courseName: 'Python Programming',
+    year: 2021,
+    institution: 'Udemy',
+    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    keyConcepts: ['Object-Oriented Programming', 'Data Structures', 'Functions', 'Modules']
+  },
+  {
+    courseName: 'Bachelor of Business Information Technology',
+    year: 2016,
+    institution: 'Meru University',
+    logo: <FaLaptopCode className="w-16 h-16 text-primary mx-auto mb-4" />, // Placeholder icon
+    keyConcepts: ['Database Management', 'Information Security', 'System Analysis', 'Business Applications']
   }
 ];
 
