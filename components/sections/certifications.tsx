@@ -3,28 +3,28 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import Image from "next/image"
+import { FaGoogle, FaKaggle, FaLaptopCode } from 'react-icons/fa' // Using FaLaptopCode for IBM
 
 const certifications = [
   {
     courseName: 'Machine Learning Specialization',
     year: 2022,
     institution: 'Coursera',
-    logo: 'https://example.com/coursera-logo.png',
+    logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
     keyConcepts: ['Supervised Learning', 'Unsupervised Learning', 'Neural Networks']
   },
   {
     courseName: 'Data Science Professional Certificate',
     year: 2021,
     institution: 'edX',
-    logo: 'https://example.com/edx-logo.png',
+    logo: <FaKaggle className="w-16 h-16 text-primary mx-auto mb-4" />,
     keyConcepts: ['Data Wrangling', 'Data Visualization', 'Statistical Analysis']
   },
   {
     courseName: 'Deep Learning Specialization',
     year: 2023,
     institution: 'Coursera',
-    logo: 'https://example.com/coursera-logo.png',
+    logo: <FaLaptopCode className="w-16 h-16 text-primary mx-auto mb-4" />, // Placeholder for IBM
     keyConcepts: ['Convolutional Networks', 'Sequence Models', 'Generative Adversarial Networks']
   }
 ];
@@ -44,8 +44,7 @@ export const CertificationsSection = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1, y: 0,
       transition: {
         duration: 0.5
       }
@@ -76,12 +75,7 @@ export const CertificationsSection = () => {
             <motion.div key={index} className="h-full" variants={itemVariants}>
               <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden group">
                 <div className="relative h-16 w-16 mb-4 mx-auto">
-                  <Image
-                    src={cert.logo}
-                    alt={`${cert.institution} logo`}
-                    fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-110"
-                  />
+                  {cert.logo}
                 </div>
                 <CardHeader>
                   <CardTitle>{cert.courseName}</CardTitle>
