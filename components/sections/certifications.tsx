@@ -18,7 +18,7 @@ const certifications = [
     year: 2024,
     institution: 'Google',
     logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
-    keyConcepts: ['Generative AI', 'Machine Learning']
+    keyConcepts: ['Generative AI', 'Machine Learning', 'Large Language Models', 'Prompt Engineering']
   },
   {
     courseName: 'Generative AI for Developers',
@@ -46,7 +46,7 @@ const certifications = [
     year: 2024,
     institution: 'Udemy',
     logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
-    keyConcepts: ['Statistical Data Analysis', 'Modeling', 'Visualization']
+    keyConcepts: ['Statistical Data Analysis', 'Modeling', 'Visualization', 'Simulation']
   },
   {
     courseName: 'Introduction to Data Analytics',
