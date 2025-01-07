@@ -61,7 +61,7 @@ export function Header() {
         isScrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container relative mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
