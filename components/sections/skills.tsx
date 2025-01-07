@@ -85,7 +85,6 @@ const skillCategories = [
   }
 ];
 
-
 export function SkillsSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -111,7 +110,7 @@ export function SkillsSection() {
 
   return (
     <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container relative mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
