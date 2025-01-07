@@ -99,8 +99,6 @@ export function HeroSection() {
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-primary/60 p-1">
             <div className="w-full h-full rounded-full overflow-hidden bg-background relative">
-              {/* Geometric Pattern */}
-              <div className="absolute inset-0 bg-[url('/images/geometric-pattern.svg')] bg-cover opacity-20 dark:opacity-10" />
               {/* Profile Image */}
               <Image
                 src="/images/profile.png"
