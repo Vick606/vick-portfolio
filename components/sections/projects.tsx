@@ -53,7 +53,7 @@ const projects = [
     image: "/images/projects/ddos-detection.jpg",
     tags: ["DDoS Detection", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/ddos-detection", // Placeholder link
-    categories: ["Cybersecurity", "Machine Learning", "Classification"]
+    categories: ["Cybersecurity", "Machine Learning", "Classification", "Networking"]
   },
   {
     title: "Customer Preferences Analysis Using FordKa Dataset",
@@ -109,7 +109,7 @@ const projects = [
     image: "/images/projects/morris-attack-simulation.jpg",
     tags: ["Morris Worm", "Network Security", "Emulation"],
     github: "https://github.com/yourusername/morris-attack-simulation", // Placeholder link
-    categories: ["Cybersecurity", "Simulation"]
+    categories: ["Cybersecurity", "Simulation", "Networking"]
   },
   {
     title: "Configured a VLAN in 4 Floors using Cisco Packet Tracer",
@@ -141,7 +141,7 @@ const projects = [
     image: "/images/projects/library-database.jpg",
     tags: ["SQL", "Database Development", "Queries"],
     github: "https://github.com/yourusername/library-database", // Placeholder link
-    categories: ["SQL"]
+    categories: ["SQL", "Software Development"]
   },
   {
     title: "Library Database System Development Using SQL",
@@ -149,7 +149,7 @@ const projects = [
     image: "/images/projects/library-system.jpg",
     tags: ["SQL", "ER Diagram", "Database System"],
     github: "https://github.com/yourusername/library-system", // Placeholder link
-    categories: ["SQL"]
+    categories: ["SQL", "Software Development"]
   },
   {
     title: "Loan Prediction Model Development",
