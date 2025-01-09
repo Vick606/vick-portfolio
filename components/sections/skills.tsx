@@ -7,8 +7,6 @@ import {
   Layout,
   Terminal,
   Book,
-  Users,
-  PenTool,
   Code 
 } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
