@@ -1,79 +1,68 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { FaGoogle, FaKaggle, FaLaptopCode, FaGraduationCap } from 'react-icons/fa' // Using FaGraduationCap for Udemy
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { FaGoogle, FaKaggle, FaLaptopCode, FaGraduationCap } from 'react-icons/fa';
 
 const certifications = [
   {
     courseName: 'Learn To Create AI Assistant (Jarvis) with Python',
-    year: 2024,
     institution: 'Udemy',
-    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
     keyConcepts: ['Artificial Intelligence', 'AI Assistant', 'Python', 'Speech Recognition']
   },
   {
     courseName: 'Introduction to Generative AI',
-    year: 2024,
     institution: 'Google',
-    logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGoogle className="w-6 h-6 text-primary" />,
     keyConcepts: ['Generative AI', 'Machine Learning', 'Large Language Models', 'Prompt Engineering']
   },
   {
     courseName: 'Generative AI for Developers',
-    year: 2024,
     institution: 'Google',
-    logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGoogle className="w-6 h-6 text-primary" />,
     keyConcepts: ['Attention Mechanism', 'Encoder-Decoder Architecture', 'Transformer Models', 'Responsible AI']
   },
   {
     courseName: 'Machine Learning Engineering',
-    year: 2024,
     institution: 'Google',
-    logo: <FaGoogle className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGoogle className="w-6 h-6 text-primary" />,
     keyConcepts: ['Machine Learning', 'Google Cloud', 'Data for ML APIs', 'BigQuery ML']
   },
   {
     courseName: 'Gen AI Intensive Course with Google',
-    year: 2024,
     institution: 'Kaggle',
-    logo: <FaKaggle className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaKaggle className="w-6 h-6 text-primary" />,
     keyConcepts: ['Foundational LLMs', 'Prompt Engineering', 'Generative Agents', 'MLOps for Generative AI']
   },
   {
     courseName: 'Python Bootcamp for Engineers and Scientists',
-    year: 2024,
     institution: 'Udemy',
-    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
     keyConcepts: ['Statistical Data Analysis', 'Modeling', 'Visualization', 'Simulation']
   },
   {
     courseName: 'Introduction to Data Analytics',
-    year: 2023,
     institution: 'IBM',
-    logo: <FaLaptopCode className="w-16 h-16 text-primary mx-auto mb-4" />, // Placeholder icon for IBM
+    logo: <FaLaptopCode className="w-6 h-6 text-primary" />,
     keyConcepts: ['Data Analysis', 'Excel', 'Data Visualization', 'Data Science']
   },
   {
     courseName: 'Learn Ethical Hacking from Scratch',
-    year: 2023,
     institution: 'Udemy',
-    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
     keyConcepts: ['Cybersecurity', 'Networking', 'Ethical Hacking', 'Linux']
   },
   {
     courseName: 'Python Programming',
-    year: 2021,
     institution: 'Udemy',
-    logo: <FaGraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />,
+    logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
     keyConcepts: ['Object-Oriented Programming', 'Data Structures', 'Functions', 'Modules']
   },
   {
     courseName: 'Bachelor of Business Information Technology',
-    year: 2016,
     institution: 'Meru University',
-    logo: <FaLaptopCode className="w-16 h-16 text-primary mx-auto mb-4" />, // Placeholder icon
+    logo: <FaLaptopCode className="w-6 h-6 text-primary" />,
     keyConcepts: ['Database Management', 'Information Security', 'System Analysis', 'Business Applications']
   }
 ];
@@ -88,7 +77,7 @@ export const CertificationsSection = () => {
         when: "beforeChildren"
       }
     }
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -98,10 +87,10 @@ export const CertificationsSection = () => {
         duration: 0.5
       }
     }
-  }
+  };
 
   return (
-    <section id="certifications" className="py-20 bg-secondary/30">
+    <section id="certifications" className="py-20 bg-grid-light dark:bg-grid-dark">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -112,29 +101,38 @@ export const CertificationsSection = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Certifications</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A collection of certifications and courses I've completed to enhance my skills in data science, machine learning, and software development.
+          </p>
         </motion.div>
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           viewport={{ once: true }}
         >
           {certifications.map((cert, index) => (
-            <motion.div key={index} className="h-full" variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden group">
-                <div className="relative h-16 w-16 mb-4 mx-auto">
-                  {cert.logo}
-                </div>
-                <CardHeader>
-                  <CardTitle>{cert.courseName}</CardTitle>
-                  <CardDescription>{cert.institution} - {cert.year}</CardDescription>
+            <motion.div key={index} variants={itemVariants}>
+              <Card className="h-full p-4 hover:shadow-lg transition-shadow group">
+                <CardHeader className="p-0">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      {cert.logo}
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg">{cert.courseName}</CardTitle>
+                      <CardDescription className="text-sm">{cert.institution}</CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
-                <CardContent>
-                  <h4 className="text-lg font-medium mt-4">Key Concepts:</h4>
-                  <ul className="list-disc pl-5">
+                <CardContent className="p-0">
+                  <h4 className="text-sm font-medium mb-2">Key Concepts:</h4>
+                  <ul className="flex flex-wrap gap-2">
                     {cert.keyConcepts.map((concept, idx) => (
-                      <li key={idx}>{concept}</li>
+                      <li key={idx} className="text-xs bg-secondary px-2 py-1 rounded-full">
+                        {concept}
+                      </li>
                     ))}
                   </ul>
                 </CardContent>
@@ -144,5 +142,5 @@ export const CertificationsSection = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
