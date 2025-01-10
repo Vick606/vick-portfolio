@@ -6,7 +6,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Victor Koech - Data Scientist & Tech Enthusiast',
+  title: 'Victor K Data Scientist',
   description: 'Portfolio showcasing data science projects and technical expertise',
   icons: {
     icon: '/favicon.ico',
