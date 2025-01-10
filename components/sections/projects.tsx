@@ -56,8 +56,8 @@ const projects = [
     categories: ["Cybersecurity", "Machine Learning", "Classification", "Networking"]
   },
   {
-    title: "Customer Preferences Analysis Using FordKa Dataset",
-    description: "Conducted PCA, Hierarchical Clustering, and K-means to understand customer preferences in choosing and buying cars, using FordKa dataset.",
+    title: "Customer Preferences Analysis",
+    description: "Conducted PCA, Hierarchical Clustering, and K-means to understand customer preferences in choosing and buying cars.",
     image: "/images/projects/fordka-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
@@ -80,7 +80,7 @@ const projects = [
     categories: ["Data Analysis", "Machine Learning", "Statistical Analysis"]
   },
   {
-    title: "EastWestAirlines Customer Clustering",
+    title: "XYZ Airlines Customer Clustering",
     description: "Clustered and categorized customers using PCA, Hierarchical Clustering, and K-Means on the EastWestAirlines dataset.",
     image: "/images/projects/eastwestairlines-clustering.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
