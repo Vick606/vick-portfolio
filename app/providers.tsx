@@ -1,4 +1,3 @@
-// app/providers.tsx
 'use client';
 
 import { ThemeProvider as NextThemesProvider, type ThemeProviderProps as NextThemesProviderProps } from 'next-themes';
