@@ -7,7 +7,11 @@ import {
   Github, 
   Linkedin, 
   Mail,
-  ExternalLink
+  ExternalLink,
+  Globe,
+  Heart,
+  Coffee,
+  Laptop
 } from "lucide-react"
 
 const contactLinks = [
@@ -56,6 +60,9 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-20">
       <div className="container relative mx-auto px-4">
+        {/* Section Separator */}
+        <hr className="my-12 border-t border-muted-foreground/20" />
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,9 +125,16 @@ export function ContactSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-center mt-12 text-muted-foreground"
+          className="text-center mt-12 text-muted-foreground flex flex-col items-center gap-2"
         >
-          <p>Based in Nairobi, Kenya • Available for Remote Work</p>
+          <div className="flex items-center gap-2">
+            <Globe className="h-4 w-4" />
+            <p>Based in Nairobi, Kenya • Available for Remote Work</p>
+            <Heart className="h-4 w-4 text-red-500" />
+            <Coffee className="h-4 w-4 text-brown-500" />
+            <Laptop className="h-4 w-4 text-blue-500" />
+          </div>
+          <p className="text-sm">© 2024 Victor Koech. All rights reserved.</p>
         </motion.div>
       </div>
     </section>
