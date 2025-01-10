@@ -10,7 +10,6 @@ import {
   ExternalLink,
   Globe,
   Heart,
-  Coffee,
   Laptop
 } from "lucide-react"
 
