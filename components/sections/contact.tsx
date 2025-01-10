@@ -25,7 +25,7 @@ const contactLinks = [
     name: "LinkedIn",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/victor-koech-b69407136/",
-    username: "Victor Kipyegon Koech"
+    username: "Victor Koech"
   },
   {
     name: "Email",
@@ -129,9 +129,9 @@ export function ContactSection() {
         >
           <div className="flex items-center gap-2">
             <Globe className="h-4 w-4" />
-            <p>Based in Nairobi, Kenya • Available for Remote Work</p>
+            <p>Based in Nairobi, Kenya 
+              Available for Remote Work</p>
             <Heart className="h-4 w-4 text-red-500" />
-            <Coffee className="h-4 w-4 text-brown-500" />
             <Laptop className="h-4 w-4 text-blue-500" />
           </div>
           <p className="text-sm">© 2024 Victor Koech. All rights reserved.</p>
