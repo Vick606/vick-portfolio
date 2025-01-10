@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronDown, ArrowRight, User } from "lucide-react"
+import { ChevronDown, ArrowRight, User, Laptop, Mail } from "lucide-react"
 
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -53,11 +53,11 @@ export function HeroSection() {
             <br />
             Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-          Harnessing ML and data analytics to solve complex real-world problems.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 flex items-center gap-2">
+            <Laptop className="h-5 w-5 text-primary" /> Solving real-world problems with ML and data analytics.
           </p>
           <p className="text-sm text-muted-foreground italic mb-8">
-          &quot;Innovating for a smarter tomorrow&quot;
+            &quot;Innovating for a smarter tomorrow&quot;
           </p>
 
           {/* Animated CTAs (Smaller Buttons) */}
@@ -85,6 +85,18 @@ export function HeroSection() {
               }}
             >
               About Me <User className="w-3 h-3 md:w-4 md:h-4" />
+            </motion.a>
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-secondary text-secondary-foreground px-4 py-2 rounded-lg font-medium flex items-center gap-2 text-sm md:text-base"
+              onClick={(e) => {
+                e.preventDefault()
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
+              Hire Me <Mail className="w-3 h-3 md:w-4 md:h-4" />
             </motion.a>
           </div>
         </motion.div>
