@@ -90,7 +90,7 @@ export const CertificationsSection = () => {
   };
 
   return (
-    <section id="certifications" className="py-20">
+    <section id="certifications" className="py-20 relative"> {/* Added relative here */}
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
