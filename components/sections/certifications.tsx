@@ -9,61 +9,61 @@ const certifications = [
     courseName: 'Learn To Create AI Assistant (Jarvis) with Python',
     institution: 'Udemy',
     logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Artificial Intelligence', 'AI Assistant', 'Python', 'Speech Recognition']
+    keyConcepts: ['Artificial Intelligence', 'Python', 'Speech Recognition']
   },
   {
     courseName: 'Introduction to Generative AI',
     institution: 'Google',
     logo: <FaGoogle className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Generative AI', 'Machine Learning', 'Large Language Models', 'Prompt Engineering']
+    keyConcepts: ['Generative AI', 'Machine Learning', 'Prompt Engineering']
   },
   {
     courseName: 'Generative AI for Developers',
     institution: 'Google',
     logo: <FaGoogle className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Attention Mechanism', 'Encoder-Decoder Architecture', 'Transformer Models', 'Responsible AI']
+    keyConcepts: ['Transformer Models', 'Encoder-Decoder', 'Responsible AI']
   },
   {
     courseName: 'Machine Learning Engineering',
     institution: 'Google',
     logo: <FaGoogle className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Machine Learning', 'Google Cloud', 'Data for ML APIs', 'BigQuery ML']
+    keyConcepts: ['Machine Learning', 'Google Cloud', 'BigQuery ML']
   },
   {
     courseName: 'Gen AI Intensive Course with Google',
     institution: 'Kaggle',
     logo: <FaKaggle className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Foundational LLMs', 'Prompt Engineering', 'Generative Agents', 'MLOps for Generative AI']
+    keyConcepts: ['Foundational LLMs', 'Prompt Engineering', 'MLOps']
   },
   {
     courseName: 'Python Bootcamp for Engineers and Scientists',
     institution: 'Udemy',
     logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Statistical Data Analysis', 'Modeling', 'Visualization', 'Simulation']
+    keyConcepts: ['Data Analysis', 'Modeling', 'Visualization']
   },
   {
     courseName: 'Introduction to Data Analytics',
     institution: 'IBM',
     logo: <FaLaptopCode className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Data Analysis', 'Excel', 'Data Visualization', 'Data Science']
+    keyConcepts: ['Data Analysis', 'Excel', 'Data Visualization']
   },
   {
     courseName: 'Learn Ethical Hacking from Scratch',
     institution: 'Udemy',
     logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Cybersecurity', 'Networking', 'Ethical Hacking', 'Linux']
+    keyConcepts: ['Cybersecurity', 'Networking', 'Ethical Hacking']
   },
   {
     courseName: 'Python Programming',
     institution: 'Udemy',
     logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Object-Oriented Programming', 'Data Structures', 'Functions', 'Modules']
+    keyConcepts: ['OOP', 'Data Structures', 'Functions']
   },
   {
     courseName: 'Bachelor of Business Information Technology',
     institution: 'Meru University',
     logo: <FaLaptopCode className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Database Management', 'Information Security', 'System Analysis', 'Business Applications']
+    keyConcepts: ['Database Management', 'System Analysis', 'Business Apps']
   }
 ];
 
@@ -90,7 +90,7 @@ export const CertificationsSection = () => {
   };
 
   return (
-    <section id="certifications" className="py-20 bg-grid-light dark:bg-grid-dark">
+    <section id="certifications" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
