@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 import { 
   Brain, 
   Code2, 
   Database,
   BarChart3
-} from "lucide-react"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
     title: "AI & Machine Learning",
-    description: "Expertise in developing and deploying machine learning models for real-world applications.",
+    description: "Building and deploying ML models for real-world applications.",
     icon: Brain
   },
   {
     title: "Data Science",
-    description: "Strong background in statistical analysis and data visualization for informed decision-making.",
+    description: "Transforming data into actionable insights for better decisions.",
     icon: Database
   },
   {
     title: "Software Development",
-    description: "Proficient in building scalable applications with modern technologies and best practices.",
+    description: "Creating scalable, modern applications with best practices.",
     icon: Code2
   },
   {
     title: "Data Analytics",
-    description: "Skilled in leveraging data analytics to uncover insights and drive decision-making.",
+    description: "Uncovering insights to drive business growth and efficiency.",
     icon: BarChart3
   }
-]
-
+];
 
 export function AboutSection() {
   const containerVariants = {
@@ -42,7 +42,7 @@ export function AboutSection() {
         staggerChildren: 0.2
       }
     }
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -53,10 +53,10 @@ export function AboutSection() {
         duration: 0.5
       }
     }
-  }
+  };
 
   return (
-    <section id="about" className="py-20 bg-secondary/30">
+    <section id="about" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,13 +65,12 @@ export function AboutSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">My Professional Odyssey</h2>
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I&apos;m Victor Koech, a passionate Business Information Technology 
-            professional with expertise in Python Programming, Data Analytics, 
-            Generative AI, and JavaScript. I love turning complex data into meaningful 
-            insights and building innovative solutions.
+            I&apos;m a data-driven technologist specializing in data analytics, machine learning, 
+            and software development. I turn complex data into actionable insights and build 
+            innovative solutions that drive business growth.
           </p>
         </motion.div>
 
@@ -108,16 +107,18 @@ export function AboutSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <h3 className="text-xl font-semibold mb-4">Background</h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            With several years of experience in the field, I&apos;ve worked on diverse projects 
-            ranging from predictive analytics to natural language processing. I have developed 
-            a Machine Learning Loan Prediction Model and various JavaScript and Node.js projects. 
-            My approach combines technical expertise with a strong focus on delivering practical 
-            business value through data-driven solutions.
+          <h3 className="text-xl font-semibold mb-4">Why Work With Me?</h3>
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
+            With years of experience in data science, machine learning, and tech
+            I bring a unique blend of technical expertise and business acumen to every project. 
+            Whether it&apos;s building predictive models, analyzing data, or developing scalable 
+            applications, I deliver solutions that drive results.
           </p>
+          <Button size="lg" asChild>
+            <a href="#contact">Let&apos;s Work Together</a>
+          </Button>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
