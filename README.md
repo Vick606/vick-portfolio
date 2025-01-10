@@ -80,4 +80,4 @@ Built with ❤️ and ☕ using Next.js and TypeScript.
 Feel free to use this template for your own portfolio!
 
 ## Contact
-If you want to get in touch, you can reach me at [].
+If you want to get in touch, you can reach me at [vickoch20@gmail.com].
