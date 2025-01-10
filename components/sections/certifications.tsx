@@ -90,7 +90,7 @@ export const CertificationsSection = () => {
   };
 
   return (
-    <section id="certifications" className="py-20 relative"> {/* Added relative here */}
+    <section id="certifications" className="py-20 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -102,7 +102,7 @@ export const CertificationsSection = () => {
           <h2 className="text-3xl font-bold mb-4">Certifications</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A collection of certifications and courses I've completed to enhance my skills in data science, machine learning, and software development.
+            A collection of certifications and courses I&apos;ve completed to enhance my skills in data science, machine learning, and software development.
           </p>
         </motion.div>
         <motion.div 
