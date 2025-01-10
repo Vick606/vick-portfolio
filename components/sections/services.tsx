@@ -3,25 +3,28 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code, Paintbrush, Search } from "lucide-react";
+import { Code, Network, Laptop } from "lucide-react";
 
 const services = [
   {
-    title: "Web Development",
-    description: "Building responsive and modern web applications using Next.js, React, and Tailwind CSS.",
+    title: "Data Analytics & Machine Learning",
+    description:
+      "From data preprocessing to model training and evaluation, I help you unlock insights from your data using advanced ML techniques like logistic regression, random forests, and gradient boosting.",
     icon: Code,
     href: "#", // Add a link if needed
   },
   {
-    title: "UI/UX Design",
-    description: "Designing user-friendly interfaces with a focus on accessibility and aesthetics.",
-    icon: Paintbrush,
+    title: "Network Simulation & Configuration",
+    description:
+      "I design, configure, and simulate networks using tools like Cisco Packet Tracer, ensuring optimal performance and reliability for your IT infrastructure.",
+    icon: Network,
     href: "#", // Add a link if needed
   },
   {
-    title: "SEO Optimization",
-    description: "Improving website visibility and ranking on search engines through best practices.",
-    icon: Search,
+    title: "Remote Tech Solutions & Consulting",
+    description:
+      "Need a versatile tech expert? I offer remote solutions for a wide range of tasks, from scripting and software development to consulting on CS and ML projects.",
+    icon: Laptop,
     href: "#", // Add a link if needed
   },
 ];
@@ -61,7 +64,7 @@ export function ServicesSection() {
           <h2 className="text-3xl font-bold mb-4">Services</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I offer a range of services to help you build and grow your online presence. Let&apos;s create something amazing together!
+            I offer a range of services to help you solve complex problems, from data analytics and machine learning to network configuration and remote tech solutions.
           </p>
         </motion.div>
 
