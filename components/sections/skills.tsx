@@ -37,28 +37,28 @@ const skillCategories = [
     icon: Database,
     skills: [
       { name: "Data Analytics", level: 95 },
-      { name: "NumPy", level: 95 },
-      { name: "Pandas", level: 90 },
+      { name: "NumPy/Pandas", level: 95 },
+      { name: "Matplotlib", level: 90 },
       { name: "Scikit-Learn", level: 85 }
     ]
   },
   {
-    name: "Web Development",
+    name: "Web Dev",
     icon: Layout,
     skills: [
       { name: "React", level: 80 },
-      { name: "Node.js", level: 75 },
+      { name: "Node.js", level: 80 },
       { name: "HTML/CSS", level: 85 },
       { name: "Next.js", level: 85 }
     ]
   },
   {
-    name: "Tools & Technologies",
+    name: "Tools & Tech",
     icon: Terminal,
     skills: [
       { name: "Git/GitHub", level: 85 },
-      { name: "Power BI", level: 80 },
-      { name: "Tableau", level: 85 },
+      { name: "MySQL Workbench/DBeaver", level: 90 },
+      { name: "Tableau/Power BI", level: 90 },
       { name: "Visual Studio Code", level: 85 }
     ]
   },
@@ -67,9 +67,9 @@ const skillCategories = [
     icon: Book,
     skills: [
       { name: "Quantitative Research", level: 95 },
-      { name: "Predictive Analytics", level: 90 },
-      { name: "Data Visualization", level: 95 }, 
-      { name: "Statistical Analysis", level: 85 } 
+      { name: "Predictive/Statistical Analytics", level: 90 },
+      { name: "IBM SPSS/MATLAB", level: 95 }, 
+      { name: "Data Visualization", level: 95 } 
     ]
   }
 ];
@@ -110,7 +110,7 @@ export function SkillsSection() {
           <h2 className="text-3xl font-bold mb-4">Skills</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My technical expertise spans across AI, data science, and software development,
+            My technical expertise spans across ML, data science, and software development,
             with a focus on building practical solutions using cutting-edge technologies.
           </p>
         </motion.div>
