@@ -239,8 +239,9 @@ export function ProjectsSection() {
           <h2 className="text-3xl font-bold mb-4">Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Explore my portfolio of AI and data science projects, showcasing practical 
-            applications of machine learning and data analysis.
+            Explore my portfolio of recent projects, showcasing practical 
+            applications of ML and data analysis. Click on a category to filter projects. 
+            Need help with a similar project? <a href="#contact" className="text-primary">Get in touch</a>.
           </p>
 
           <div className="flex flex-wrap gap-2 justify-center mb-12">

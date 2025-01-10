@@ -64,7 +64,9 @@ export function ServicesSection() {
           <h2 className="text-3xl font-bold mb-4">Services</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I offer a range of services to help you solve complex problems, from data analytics and machine learning to network configuration and remote tech solutions.
+            I offer a range of services to help you solve complex problems, 
+            from data analytics and machine learning to network configuration and remote tech solutions.
+            Hire me for your next project! <a href="#contact" className="text-primary">Get in touch</a>.
           </p>
         </motion.div>
 
