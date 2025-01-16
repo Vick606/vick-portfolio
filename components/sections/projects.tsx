@@ -17,7 +17,7 @@ import Image from "next/image"
 const projects = [
   {
     title: "Traffic Density Estimation Using YOLO V8n",
-    description: "Developed traffic density estimation in real-time using YOLO V8n. Used libraries such as numpy, pandas, matplotlib, seaborn, cv2, PIL, and ultralytics.",
+    description: "Implemented real-time traffic density estimation using YOLO V8n with libraries like numpy, pandas, and OpenCV.",
     image: "/images/projects/traffic-density.jpg",
     tags: ["YOLO V8n", "Computer Vision", "Real-Time Estimation"],
     github: "https://github.com/yourusername/traffic-density-estimation", // Placeholder link
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: "Temperature Change Analysis in Kenya, Uganda, and Tanzania",
-    description: "Developed a classification model to analyze, visualize, and compare temperature changes in Kenya, Uganda, and Tanzania, using FAOSTAT Temperature Change dataset.",
+    description: "Analyzed, visualized, and compared temperature changes in Kenya, Uganda, and Tanzania using FAOSTAT dataset.",
     image: "/images/projects/temperature-change.jpg",
     tags: ["Temperature Analysis", "Climate Change", "Data Visualization"],
     github: "https://github.com/yourusername/temperature-change-analysis", // Placeholder link
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     title: "Sentiment Analysis of Tweets Using Sentiment140 Dataset",
-    description: "Conducted sentiment analysis of tweets using Sentiment140 dataset (1.6 million tweets) with Logistic Regression, Random Forest, and SVM algorithms.",
+    description: "Analyzed 1.6M tweets using Sentiment140 dataset with Logistic Regression, Random Forest, and SVM.",
     image: "/images/projects/sentiment-analysis.jpg",
     tags: ["Sentiment Analysis", "NLP", "Logistic Regression", "Random Forest", "SVM"],
     github: "https://github.com/yourusername/sentiment-analysis-tweets", // Placeholder link
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     title: "DDoS Detection Using Random Forest and Logistic Regression",
-    description: "Developed, trained, and tested the effectiveness of Random Forest and Logistic Regression models in detecting DDoS using DDoS1-Tuesday-20-02-2018_TrafficForML dataset.",
+    description: "Implemented RF and LR on DDoS1-Tuesday-20-02-2018_TrafficForML dataset, testing effectiveness in detecting DDoS attacks.",
     image: "/images/projects/ddos-detection.jpg",
     tags: ["DDoS Detection", "Random Forest", "Logistic Regression"],
     github: "https://github.com/yourusername/ddos-detection", // Placeholder link
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     title: "Customer Preferences Analysis",
-    description: "Conducted PCA, Hierarchical Clustering, and K-means to understand customer preferences in choosing and buying cars.",
+    description: "Used PCA, Hierarchical Clustering, and K-means to understand customer preferences in car buying.",
     image: "/images/projects/fordka-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/fordka-analysis", // Placeholder link
@@ -73,19 +73,11 @@ const projects = [
   },
   {
     title: "Housing Dataset Analysis",
-    description: "Analyzed housing dataset to understand customer preferences using PCA, Hierarchical Clustering, and K-Means.",
+    description: "Analyzed housing dataset to understand customer preferences.",
     image: "/images/projects/housing-dataset-analysis.jpg",
     tags: ["PCA", "Hierarchical Clustering", "K-Means"],
     github: "https://github.com/yourusername/housing-dataset-analysis", // Placeholder link
     categories: ["Data Analysis", "Machine Learning", "Statistical Analysis"]
-  },
-  {
-    title: "XYZ Airlines Customer Clustering",
-    description: "Clustered and categorized customers using PCA, Hierarchical Clustering, and K-Means on the EastWestAirlines dataset.",
-    image: "/images/projects/eastwestairlines-clustering.jpg",
-    tags: ["PCA", "Hierarchical Clustering", "K-Means"],
-    github: "https://github.com/yourusername/eastwestairlines-clustering", // Placeholder link
-    categories: ["Data Analysis", "Machine Learning"]
   },
   {
     title: "Tesla Stock Prediction with Stacked-LSTM",
@@ -97,7 +89,7 @@ const projects = [
   },
   {
     title: "Mushroom Classification Using Machine Learning",
-    description: "This project involved classifying mushrooms into edible and poisonous categories using various machine learning algorithms, including Support Vector Machine and Artificial Neural Networks.",
+    description: "This project involved classifying mushrooms into edible and poisonous categories using various ML algorithms, including SVM and Artificial Neural Networks.",
     image: "/images/projects/mushroom-classification.jpg",
     tags: ["Logistic Regression", "Random Forest", "SVM", "ANN"],
     github: "https://github.com/yourusername/mushroom-classification", // Placeholder link
@@ -112,8 +104,8 @@ const projects = [
     categories: ["Cybersecurity", "Simulation", "Networking"]
   },
   {
-    title: "Configured a VLAN in 4 Floors using Cisco Packet Tracer",
-    description: "Configured VLANs across 4 floors with different departments, utilizing Cisco Packet Tracer for network simulation and communication.",
+    title: "Configured a VLAN using Cisco Packet Tracer",
+    description: "Configured VLANs across floors with different departments, utilizing Cisco Packet Tracer for network simulation and communication.",
     image: "/images/projects/vlan-configuration.jpg", 
     tags: ["VLAN", "Cisco Packet Tracer", "Network Configuration"],
     github: "https://github.com/yourusername/vlan-configuration", // Placeholder link
@@ -153,7 +145,7 @@ const projects = [
   },
   {
     title: "Loan Prediction Model Development",
-    description: "Developed a loan prediction model using ML algorithms like Logistic Regression, Decision Tree, SVM, KNN, and Random Forest to optimize the loan approval process.",
+    description: "Implemented a loan prediction model using ML algorithms like SVM, KNN, and Random Forest to optimize the loan approval process.",
     image: "/images/projects/loan-prediction.jpg", 
     tags: ["Loan Prediction", "ML Algorithms", "Optimization"],
     github: "https://github.com/yourusername/loan-prediction", // Placeholder link
@@ -162,8 +154,8 @@ const projects = [
 ];
 
 const categoryConfig = {
-  "All": { priority: 1, description: "All projects" },
-  "Machine Learning": { priority: 2, description: "Machine learning projects" },
+  "Machine Learning": { priority: 1, description: "Machine learning projects" },
+  "All": { priority: 2, description: "All projects" },
   "Deep Learning": { priority: 3, description: "Neural networks and deep learning projects" },
   "Computer Vision": { priority: 4, description: "Image processing and computer vision projects" },
   "Data Analysis": { priority: 5, description: "Data exploration and visualization projects" },
