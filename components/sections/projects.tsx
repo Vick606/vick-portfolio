@@ -140,7 +140,7 @@ const projects = [
     description: "Created ER diagrams, executed queries, and ensured functionality in a library database system using SQL.",
     image: "/images/projects/library-system.jpg",
     tags: ["SQL", "ER Diagram", "Database System"],
-    github: "https://github.com/yourusername/library-system", // Placeholder link
+    github: "https://github.com/yourusername/library-system", 
     categories: ["SQL", "Software Development"]
   },
   {
@@ -148,7 +148,7 @@ const projects = [
     description: "Implemented a loan prediction model using ML algorithms like SVM, KNN, and Random Forest to optimize the loan approval process.",
     image: "/images/projects/loan-prediction.jpg", 
     tags: ["Loan Prediction", "ML Algorithms", "Optimization"],
-    github: "https://github.com/yourusername/loan-prediction", // Placeholder link
+    github: "https://github.com/yourusername/loan-prediction", 
     categories: ["Machine Learning", "Classification"]
   }
 ];
