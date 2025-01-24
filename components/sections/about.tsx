@@ -4,32 +4,32 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { 
   Brain, 
-  Code2, 
   Database,
-  BarChart3
+  BarChart3,
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    title: "AI & Machine Learning",
-    description: "Building and deploying ML models for real-world applications.",
+    title: "Machine Learning",
+    description: "Designing and deploying ML models for predictive analytics and intelligent decision-making.",
     icon: Brain
   },
   {
     title: "Data Science",
-    description: "Transforming data into actionable insights for better decisions.",
+    description: "Transforming raw data into actionable insights to solve complex business problems.",
     icon: Database
   },
   {
-    title: "Software Development",
-    description: "Creating scalable, modern applications with best practices.",
-    icon: Code2
+    title: "Data Analytics",
+    description: "Uncovering trends and patterns to drive business growth and operational efficiency.",
+    icon: BarChart3
   },
   {
-    title: "Data Analytics",
-    description: "Uncovering insights to drive business growth and efficiency.",
-    icon: BarChart3
+    title: "Workflow Automation",
+    description: "Streamlining repetitive tasks and processes to save time and reduce errors.",
+    icon: Zap
   }
 ];
 
@@ -68,9 +68,8 @@ export function AboutSection() {
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I&apos;m a data-driven technologist specializing in data analytics, machine learning, 
-            and software development. I turn complex data into actionable insights and build 
-            innovative solutions that drive business growth.
+            I’m a data-driven technologist specializing in machine learning, data science, and workflow automation. 
+            I turn complex data into actionable insights and build intelligent solutions that drive efficiency and growth.
           </p>
         </motion.div>
 
@@ -109,13 +108,12 @@ export function AboutSection() {
         >
           <h3 className="text-xl font-semibold mb-4">Why Work With Me?</h3>
           <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
-            With years of experience in data science, machine learning, and tech
-            I bring a unique blend of technical expertise and business acumen to every project. 
-            Whether it&apos;s building predictive models, analyzing data, or developing scalable 
-            applications, I deliver solutions that drive results.
+            With expertise in machine learning, data science, and automation, I bring a unique blend of technical skills 
+            and problem-solving abilities to every project. Whether it’s building predictive models, analyzing data, 
+            or automating workflows, I deliver solutions that drive measurable results.
           </p>
           <Button size="lg" asChild>
-            <a href="#contact">Let&apos;s Work Together</a>
+            <a href="#contact">Let’s Work Together</a>
           </Button>
         </motion.div>
       </div>
