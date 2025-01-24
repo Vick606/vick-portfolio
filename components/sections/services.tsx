@@ -3,28 +3,21 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code, Network, Laptop } from "lucide-react";
+import { Code, Zap } from "lucide-react"; // Using Zap for Automation
 
 const services = [
   {
-    title: "Data Analytics & Machine Learning",
+    title: "Machine Learning & Data Science",
     description:
-      "From data preprocessing to model training and evaluation, I help you unlock insights from your data using advanced ML techniques like logistic regression, random forests, and gradient boosting.",
+      "Unlock insights from your data with advanced ML techniques. From data preprocessing to predictive modeling, I deliver actionable solutions for your business.",
     icon: Code,
     href: "#", // Add a link if needed
   },
   {
-    title: "Network Simulation & Configuration",
+    title: "Workflow Automation",
     description:
-      "I design, configure, and simulate networks using tools like Cisco Packet Tracer, ensuring optimal performance and reliability for your IT infrastructure.",
-    icon: Network,
-    href: "#", // Add a link if needed
-  },
-  {
-    title: "Remote Tech Solutions & Consulting",
-    description:
-      "Need a versatile tech expert? I offer remote solutions for a wide range of tasks, from scripting and software development to consulting on CS and ML projects.",
-    icon: Laptop,
+      "Streamline repetitive tasks and boost efficiency with custom automation solutions. I design workflows to save time and reduce errors using tools like Python and Make.",
+    icon: Zap,
     href: "#", // Add a link if needed
   },
 ];
@@ -64,9 +57,9 @@ export function ServicesSection() {
           <h2 className="text-3xl font-bold mb-4">Services</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I offer a range of services to help you solve complex problems, 
-            from data analytics and machine learning to network configuration and remote tech solutions.
-            Hire me for your next project! <a href="#contact" className="text-primary">Get in touch</a>.
+            I specialize in transforming data into insights and workflows into efficiency. 
+            Whether it’s building ML models or automating tasks, I deliver solutions that drive results. 
+            <a href="#contact" className="text-primary"> Let’s work together!</a>
           </p>
         </motion.div>
 
@@ -78,7 +71,7 @@ export function ServicesSection() {
           className="max-w-6xl mx-auto"
         >
           <Card className="p-6 md:p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
