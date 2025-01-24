@@ -128,8 +128,7 @@ export function ContactSection() {
         >
           <div className="flex items-center gap-2">
             <Globe className="h-4 w-4" />
-            <p>Based in Nairobi, Kenya 
-              Available for Remote Work</p>
+            <p>Open to Remote Opportunities</p> 
             <Heart className="h-4 w-4 text-red-500" />
             <Laptop className="h-4 w-4 text-blue-500" />
           </div>
