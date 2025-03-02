@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from './providers';
 import { Header } from '@/components/layout/header';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -31,6 +32,7 @@ export default function RootLayout({
           <main id="main" className="relative min-h-screen">
             {children}
           </main>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
