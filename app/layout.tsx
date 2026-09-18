@@ -8,8 +8,9 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Victor K | Data Science & Workflow Automation',
-  description: 'Transforming data into insights and workflows into efficiency',
+  title: 'Victor Koech | AI Training, LLM Evaluation & Python',
+  description:
+    'Five years in AI training, data annotation and Python. I build the tooling that makes AI evaluation reproducible.',
   icons: {
     icon: '/favicon.ico',
   },

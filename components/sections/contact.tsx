@@ -72,8 +72,8 @@ export function ContactSection() {
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I&apos;m always interested in new opportunities and collaborations. 
-            Feel free to reach out through any of these platforms.
+            I&apos;m open to remote roles in AI training, LLM evaluation and Python
+            engineering — and to a conversation about anything on this page.
           </p>
         </motion.div>
 
@@ -132,7 +132,9 @@ export function ContactSection() {
             <Heart className="h-4 w-4 text-red-500" />
             <Laptop className="h-4 w-4 text-blue-500" />
           </div>
-          <p className="text-sm">© 2024 Victor Koech. All rights reserved.</p>
+          <p className="text-sm">
+            © {new Date().getFullYear()} Victor Koech. All rights reserved.
+          </p>
         </motion.div>
       </div>
     </section>

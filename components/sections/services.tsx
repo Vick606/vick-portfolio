@@ -3,22 +3,28 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code, Zap } from "lucide-react"; // Using Zap for Automation
+import { Gauge, Tags, Terminal } from "lucide-react";
 
+// One card per target role. The previous two cards had href="#", which sent
+// visitors nowhere — these all point at the contact section.
 const services = [
   {
-    title: "Machine Learning & Data Science",
+    title: "AI Training & Data Annotation",
     description:
-      "Unlock insights from your data with advanced ML techniques. From data preprocessing to predictive modeling, I deliver actionable solutions for your business.",
-    icon: Code,
-    href: "#", // Add a link if needed
+      "Annotation guidelines, quality control and reviewer workflows for training data that holds up under audit.",
+    icon: Tags,
   },
   {
-    title: "Workflow Automation",
+    title: "LLM Evaluation",
     description:
-      "Streamline repetitive tasks and boost efficiency with custom automation solutions. I design workflows to save time and reduce errors using tools like Python and Make.",
-    icon: Zap,
-    href: "#", // Add a link if needed
+      "Rubrics, evaluation harnesses and reproducible scoring — turning subjective judgement into something you can measure and re-run.",
+    icon: Gauge,
+  },
+  {
+    title: "Python Engineering",
+    description:
+      "Automation and tooling: pipelines, containerised test environments and structured reporting.",
+    icon: Terminal,
   },
 ];
 
@@ -28,7 +34,7 @@ export function ServicesSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -57,9 +63,12 @@ export function ServicesSection() {
           <h2 className="text-3xl font-bold mb-4">Services</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I specialize in transforming data into insights and workflows into efficiency. 
-            Whether it’s building ML models or automating tasks, I deliver solutions that drive results. 
-            <a href="#contact" className="text-primary"> Let’s work together!</a>
+            Where I can help: building training data that holds up, making evaluation
+            something you can actually measure, and writing the Python that keeps both
+            running.{" "}
+            <a href="#contact" className="text-primary">
+              Let&apos;s work together.
+            </a>
           </p>
         </motion.div>
 
@@ -68,27 +77,22 @@ export function ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <Card className="p-6 md:p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+              {services.map((service) => (
                 <motion.div
-                  key={index}
+                  key={service.title}
                   variants={itemVariants}
                   className="flex"
                 >
                   <Button
                     variant="outline"
-                    className="w-full h-48 p-4 hover:bg-primary hover:text-primary-foreground text-base flex flex-col items-center justify-center gap-4"
+                    className="w-full h-full min-h-[200px] p-5 hover:bg-primary hover:text-primary-foreground text-base flex flex-col items-center justify-center gap-4"
                     asChild
                   >
-                    <a
-                      href={service.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-center"
-                    >
+                    <a href="#contact" className="text-center">
                       <service.icon className="h-8 w-8" />
                       <div>
                         <div className="font-medium text-lg">{service.title}</div>

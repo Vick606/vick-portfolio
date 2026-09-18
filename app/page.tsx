@@ -2,6 +2,7 @@ import { HeroSection } from '@/components/sections/hero';
 import { AboutSection } from '@/components/sections/about';
 import { SkillsSection } from '@/components/sections/skills';
 import { ProjectsSection } from '@/components/sections/projects';
+import { EducationSection } from '@/components/sections/education';
 import { CertificationsSection } from '@/components/sections/certifications';
 import { ContactSection } from '@/components/sections/contact';
 import { ServicesSection } from '@/components/sections/services';
@@ -14,6 +15,7 @@ export default function Home() {
       <SkillsSection />
       <ServicesSection />
       <ProjectsSection />
+      <EducationSection />
       <CertificationsSection />
       <ContactSection />
     </>
