@@ -1,83 +1,106 @@
-# Victor Koech Portfolio
+# Victor Koech — Portfolio
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/Vick606/vick-portfolio)
 ![GitHub issues](https://img.shields.io/github/issues/Vick606/vick-portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/Vick606/vick-portfolio)
 
-A modern, responsive portfolio website showcasing Data Science, Machine Learning, and AI projects. Built with Next.js 14 and featuring a clean, professional design with dark/light mode support.
+Personal portfolio for **Victor Koech** — machine learning, data science and AI engineering work.
+
+**Live:** https://vk-portfolio.vercel.app/
 
 ## Features
 
-- **Responsive Design**: Fully optimized for all devices and screen sizes
-- **Dark/Light Theme**: Elegant theme switching with smooth transitions
-- **Project Showcase**: Filterable gallery of Data Science and AI projects
-- **Animated UI**: Smooth animations and transitions using Framer Motion
-- **Skills Section**: Visual representation of technical competencies
-- **Modern Stack**: Built with Next.js 14 and TypeScript
+- **Responsive layout** — mobile-first, tested down to small phone widths
+- **Dark / light theme** — follows the system preference by default, with a manual toggle
+- **Filterable project gallery** — browse by category, with per-category counts
+- **Scroll-driven animation** — parallax hero and staggered section reveals
+- **Fully static** — every route is prerendered at build time; no runtime data fetching
 
-## Tech Stack
+## Tech stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Theme**: [next-themes](https://github.com/pacocoursey/next-themes)
+| Layer | Choice |
+|---|---|
+| Framework | [Next.js](https://nextjs.org/) 16 (App Router, Turbopack) |
+| Language | [TypeScript](https://www.typescriptlang.org/) 5.9, `strict` |
+| UI runtime | [React](https://react.dev/) 19 |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) 3.4 |
+| Components | [shadcn/ui](https://ui.shadcn.com/) on Radix primitives |
+| Animation | [Framer Motion](https://www.framer.com/motion/) |
+| Theming | [next-themes](https://github.com/pacocoursey/next-themes) |
+| Linting | [ESLint](https://eslint.org/) 9, flat config |
+| Hosting | [Vercel](https://vercel.com/) |
 
-<p align="center">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-023e8a?style=for-the-badge&logo=typescript" />
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=nextdotjs" />
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img alt="Framer Motion" src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
-</p>
+## Getting started
 
-## Getting Started
+### Prerequisites
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Vick606/vick-portfolio
+- **Node.js 20.9.0 or newer** — required by Next.js 16
+- npm
 
-2. **Install dependencies**:
-cd Data-Science-Portfolio
-npm install
+### Setup
 
-3. **Run the development server**:
+```bash
+git clone https://github.com/Vick606/vick-portfolio.git
+cd vick-portfolio
+npm ci
 npm run dev
+```
 
-4. Open http://localhost:3000 in your browser.
+Then open http://localhost:3000.
 
-## Project Structure
+`npm ci` installs the exact versions pinned in `package-lock.json`. Use it rather than `npm install` to get a reproducible tree.
 
-- app/: Next.jsapp directory containing pages and layouts
+### Scripts
 
-- components/: Reusable UI components
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the dev server (Turbopack) |
+| `npm run build` | Create an optimised production build |
+| `npm start` | Serve the production build locally |
+| `npm run lint` | Run ESLint across the project |
 
-- sections/: Main page sections (Hero, About, Projects, etc.)
+## Project structure
 
-- ui/: Shared UI components
+```
+app/                     App Router entry point
+  layout.tsx             Root layout, metadata, fonts
+  page.tsx               Home page — composes the sections
+  globals.css            Tailwind layers, theme tokens, custom utilities
+  providers.tsx          Theme provider
+components/
+  layout/                Header, navigation, theme toggle
+  sections/              Page sections — hero, about, skills, services,
+                         projects, certifications, contact
+  ui/                    shadcn/ui primitives (button, card, badge, sheet…)
+lib/                     Shared utilities
+public/images/           Profile photo and project imagery
+```
 
-- layout/: Layout components like Header
+## Customisation
 
-- lib/: Utility functions and shared logic
-
-- public/: Static assets and images
-
-## Customization
-Update project data in components/sections/projects.tsx
-
-Modify skills information in components/sections/skills.tsx
+| What | Where |
+|---|---|
+| Project entries and categories | `components/sections/projects.tsx` |
+| Skills and proficiency levels | `components/sections/skills.tsx` |
+| Certifications | `components/sections/certifications.tsx` |
+| Services offered | `components/sections/services.tsx` |
+| Colour tokens and theme | `app/globals.css` |
 
 ## Deployment
-This project is optimized for deployment on Vercel:
 
-- Push your code to GitHub
-- Import your repository to Vercel
-- Deploy and get your live portfolio website
+Deployed on Vercel and wired to this repository:
+
+- Push to `main` → production deploy
+- Open a pull request → preview deploy with its own URL
+
+No environment variables are required.
 
 ## License
-This project is open-source and available under the MIT License.
 
-Built with ❤️ and ☕ using Next.js and TypeScript.
-Feel free to use this template for your own portfolio!
+Released under the MIT License — see [LICENSE](LICENSE).
 
 ## Contact
-If you want to get in touch, you can reach me at [vickoch20@gmail.com].
+
+- **GitHub** — [@Vick606](https://github.com/Vick606)
+- **LinkedIn** — [Victor Koech](https://www.linkedin.com/in/victor-koech-b69407136/)
+- **Email** — [vickoch20@gmail.com](mailto:vickoch20@gmail.com)
