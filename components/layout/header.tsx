@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import Link from 'next/link'
 import { Menu, Sun, Moon } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -22,14 +22,26 @@ const navLinks = [
   { href: '#contact', label: 'Contact' }
 ]
 
+// Stable no-op subscription for the hydration guard below. Declared at module
+// scope so the reference never changes between renders.
+const subscribeToNothing = () => () => {}
+const getIsClient = () => true
+const getIsServer = () => false
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  // Hydration guard: false during SSR and the first client render, true after.
+  // Replaces the previous setState-in-effect pattern, which React flags as
+  // triggering cascading renders.
+  const mounted = useSyncExternalStore(
+    subscribeToNothing,
+    getIsClient,
+    getIsServer,
+  )
 
   useEffect(() => {
-    setMounted(true)
     const handleScroll = () => {
       const scrolled = window.scrollY > 50
       setIsScrolled(scrolled)
