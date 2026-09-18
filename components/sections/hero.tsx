@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronDown, ArrowRight, User, Laptop, Mail } from "lucide-react"
+import { ChevronDown, ArrowRight, User, Mail, Sparkles } from "lucide-react"
 
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -51,13 +51,12 @@ export function HeroSection() {
               Victor Koech
             </span>
             <br />
-            Portfolio
+            <span className="text-2xl md:text-4xl text-muted-foreground">
+              AI Training · LLM Evaluation · Python
+            </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 flex items-center gap-2">
-            <Laptop className="h-5 w-5 text-primary" /> Solving real-world problems with ML and data analytics.
-          </p>
-          <p className="text-sm text-muted-foreground italic mb-8">
-            &quot;Innovating for a smarter tomorrow&quot;
+            <Sparkles className="h-5 w-5 text-primary" /> I build the tooling that makes AI evaluation reproducible.
           </p>
 
           {/* Animated CTAs (Smaller Buttons) */}

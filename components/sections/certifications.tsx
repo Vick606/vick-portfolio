@@ -58,12 +58,6 @@ const certifications = [
     institution: 'Udemy',
     logo: <FaGraduationCap className="w-6 h-6 text-primary" />,
     keyConcepts: ['OOP', 'Data Structures', 'Functions']
-  },
-  {
-    courseName: 'Bachelor of Business Information Technology',
-    institution: 'Meru University',
-    logo: <FaLaptopCode className="w-6 h-6 text-primary" />,
-    keyConcepts: ['Database Management', 'System Analysis', 'Business Apps']
   }
 ];
 
@@ -102,7 +96,7 @@ export const CertificationsSection = () => {
           <h2 className="text-3xl font-bold mb-4">Certifications</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A collection of certifications and courses I&apos;ve completed to enhance my skills in data science, machine learning, and software development.
+            Courses I&apos;ve completed across AI, data science and software development.
           </p>
         </motion.div>
         <motion.div 
