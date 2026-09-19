@@ -20,7 +20,7 @@ export function HeroSection() {
     <section 
       ref={ref}
       id="home" 
-      className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0 scroll-mt-20"
+      className="relative min-h-svh flex items-center justify-center overflow-hidden pt-16 md:pt-0 scroll-mt-20"
     >
       {/* Dynamic Background with Parallax Effect */}
       <motion.div 
@@ -28,7 +28,11 @@ export function HeroSection() {
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-background/20 dark:from-primary/10 dark:to-background/10" />
-        <div className="absolute inset-0 bg-grid-black/[0.1] dark:bg-grid-white/[0.1]" />
+        {/* `bg-grid-black` / `bg-grid-white` were never real utilities: the
+            Tailwind config declares no backgroundImage, and an opacity
+            modifier cannot apply to a background image regardless. These are
+            the two classes globals.css actually defines — until now, unused. */}
+        <div className="absolute inset-0 bg-grid-light dark:bg-grid-dark" />
         <motion.div
           initial={{ scale: 1 }}
           animate={{ scale: 1.1 }}

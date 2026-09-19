@@ -36,6 +36,11 @@ const contactLinks = [
   }
 ]
 
+// Only http(s) destinations open in a new tab. Putting target="_blank" on the
+// mailto: entry leaves an empty tab behind in several browsers before the mail
+// client takes over.
+const isExternal = (href: string) => href.startsWith("http")
+
 export function ContactSection() {
   const containerVariants = staggerContainer(0.2)
   const itemVariants = fadeUpItem()
@@ -71,10 +76,10 @@ export function ContactSection() {
                     className="w-full h-32 p-4 hover:bg-primary hover:text-primary-foreground text-base flex flex-col items-center justify-center gap-2"
                     asChild
                   >
-                    <a 
+                    <a
                       href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={isExternal(link.href) ? "_blank" : undefined}
+                      rel={isExternal(link.href) ? "noopener noreferrer" : undefined}
                       className="text-center"
                     >
                       <link.icon className="h-6 w-6" />
