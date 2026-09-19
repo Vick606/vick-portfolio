@@ -1,0 +1,18 @@
+# pnpm configuration for this project.
+#
+# pnpm 10+ blocks dependency lifecycle scripts by default as a supply-chain
+# measure, so every blocked package has to be decided explicitly here.
+#
+# unrs-resolver arrives via eslint-config-next -> eslint-import-resolver-typescript.
+# It ships prebuilt native binaries as optionalDependencies, and its postinstall
+# script (napi-postinstall's checkAndPreparePackage) only verifies that the
+# binding for the current platform is in place. Allowing it is therefore a no-op
+# on a machine where the optional dependency installed correctly, and it means
+# the install self-heals on any platform where that optional dependency is
+# missing, rather than failing later at lint time.
+#
+# If a Vercel build ever objects to this script running, setting it to false is
+# the safe alternative: the binary is already provided by
+# @unrs/resolver-binding-<platform>, so the script is not required to lint or build.
+allowBuilds:
+  unrs-resolver: true
