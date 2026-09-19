@@ -35,7 +35,7 @@ export function ServicesSection() {
   const itemVariants = fadeUpItem();
 
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20 scroll-mt-20">
       <div className="container relative mx-auto px-4">
         <SectionHeader
           title="Services"

@@ -23,7 +23,7 @@ export function ProjectsSection() {
   const itemVariants = fadeUpItem()
 
   return (
-    <section id="projects" className="py-20 bg-secondary/30">
+    <section id="projects" className="py-20 bg-secondary/30 scroll-mt-20">
       <div className="container mx-auto px-4">
         <SectionHeader
           title="Projects"

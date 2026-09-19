@@ -48,7 +48,7 @@ export function SkillsSection() {
   const itemVariants = fadeUpItem("easeOut");
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 scroll-mt-20">
       <div className="container relative mx-auto px-4">
         <SectionHeader
           title="Skills"

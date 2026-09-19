@@ -41,7 +41,7 @@ export function ContactSection() {
   const itemVariants = fadeUpItem()
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 scroll-mt-20">
       <div className="container relative mx-auto px-4">
         {/* Section Separator */}
         <hr className="my-12 border-t border-muted-foreground/20" />

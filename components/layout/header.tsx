@@ -12,12 +12,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+// Order matches the render order in app/page.tsx.
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
-  { href: '#services', label: 'Services' }, 
+  { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
   { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' }
 ]
@@ -31,6 +33,7 @@ const getIsServer = () => false
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
   const { theme, setTheme } = useTheme()
   // Hydration guard: false during SSR and the first client render, true after.
   // Replaces the previous setState-in-effect pattern, which React flags as
@@ -51,20 +54,34 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleNavClick = (href: string) => {
-    setIsOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      const headerOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
+  // Tracks which section sits under the header. The rootMargin carves out a
+  // band just below the 64px header so exactly one section reads as current
+  // rather than several at once.
+  //
+  // The nav links themselves are plain anchors now: scrolling is CSS
+  // (`html { scroll-behavior }` in globals.css) and the header offset is
+  // `scroll-mt-20` on each section. Nothing here calls preventDefault, so the
+  // URL hash is written normally and links can be shared, middle-clicked and
+  // opened without JS.
+  useEffect(() => {
+    const sections = navLinks
+      .map(({ href }) => document.getElementById(href.slice(1)))
+      .filter((el): el is HTMLElement => el !== null)
+
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActiveSection(`#${entry.target.id}`)
+        }
+      },
+      { rootMargin: '-80px 0px -70% 0px' }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <motion.header
@@ -80,39 +97,44 @@ export function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link 
+            <Link
               href="#home"
               className="text-xl font-bold hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault()
-                handleNavClick('#home')
-              }}
             >
               Victor Koech
             </Link>
           </motion.div>
 
-          <nav className="hidden md:block">
-            <ul className="flex space-x-8">
-              {navLinks.map(({ href, label }) => (
-                <motion.li
-                  key={href}
-                  whileHover={{ y: -2 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                >
-                  <Link
-                    href={href}
-                    className="hover:text-primary transition-colors relative group"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      handleNavClick(href)
-                    }}
+          {/* Eight links need room: the nav appears at lg, and the gap is 6
+              rather than 8, so it clears the logo instead of colliding with it
+              around tablet widths. */}
+          <nav className="hidden lg:block">
+            <ul className="flex space-x-6">
+              {navLinks.map(({ href, label }) => {
+                const isActive = activeSection === href
+                return (
+                  <motion.li
+                    key={href}
+                    whileHover={{ y: -2 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
-                    {label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                  </Link>
-                </motion.li>
-              ))}
+                    <Link
+                      href={href}
+                      aria-current={isActive ? 'true' : undefined}
+                      className={`transition-colors relative group ${
+                        isActive ? 'text-primary' : 'hover:text-primary'
+                      }`}
+                    >
+                      {label}
+                      <span
+                        className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all ${
+                          isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}
+                      />
+                    </Link>
+                  </motion.li>
+                )
+              })}
             </ul>
           </nav>
 
@@ -139,9 +161,9 @@ export function Header() {
                 </motion.div>
               )}
             </AnimatePresence>
-            
+
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild className="md:hidden">
+              <SheetTrigger asChild className="lg:hidden">
                 <Button variant="ghost" size="icon" className="h-9 w-9">
                   <Menu className="h-4 w-4" />
                   <span className="sr-only">Toggle menu</span>
@@ -158,11 +180,13 @@ export function Header() {
                     >
                       <Link
                         href={href}
-                        className="px-4 py-3 text-lg hover:text-primary transition-colors block"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          handleNavClick(href)
-                        }}
+                        aria-current={activeSection === href ? 'true' : undefined}
+                        onClick={() => setIsOpen(false)}
+                        className={`px-4 py-3 text-lg transition-colors block ${
+                          activeSection === href
+                            ? 'text-primary'
+                            : 'hover:text-primary'
+                        }`}
                       >
                         {label}
                       </Link>
