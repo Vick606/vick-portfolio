@@ -49,6 +49,16 @@
     --input: 210 25% 25%; /* Dark gray for inputs */
     --ring: 190 85% 49%; /* Bright cyan for focus rings */
   }
+
+  /* Anchor navigation. Every section carries scroll-mt-20 to clear the fixed
+     64px header, so nav links can stay plain anchors and the browser does the
+     scrolling — no JS. Guarded so a reduced-motion preference gets an instant
+     jump instead of a smooth one. */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 @layer utilities {

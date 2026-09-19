@@ -22,7 +22,7 @@ export function EducationSection() {
   const itemVariants = fadeUpItem();
 
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <SectionHeader title="Education" />
 

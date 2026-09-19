@@ -20,7 +20,7 @@ export function HeroSection() {
     <section 
       ref={ref}
       id="home" 
-      className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0"
+      className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0 scroll-mt-20"
     >
       {/* Dynamic Background with Parallax Effect */}
       <motion.div 
@@ -66,10 +66,6 @@ export function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium flex items-center gap-2 text-sm md:text-base"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
-              }}
             >
               View Projects <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
             </motion.a>
@@ -78,10 +74,6 @@ export function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border border-primary text-primary px-4 py-2 rounded-lg font-medium flex items-center gap-2 text-sm md:text-base"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
-              }}
             >
               About Me <User className="w-3 h-3 md:w-4 md:h-4" />
             </motion.a>
@@ -90,10 +82,6 @@ export function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-secondary text-secondary-foreground px-4 py-2 rounded-lg font-medium flex items-center gap-2 text-sm md:text-base"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-              }}
             >
               Hire Me <Mail className="w-3 h-3 md:w-4 md:h-4" />
             </motion.a>

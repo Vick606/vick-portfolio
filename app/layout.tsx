@@ -24,6 +24,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} relative`}>
+        {/* First focusable element on the page. `#main` carries tabIndex={-1}
+            so following this link actually moves focus, not just the scroll
+            position — otherwise keyboard users stay stranded in the header. */}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:font-medium focus:text-primary-foreground"
+        >
+          Skip to content
+        </a>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -31,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main id="main" className="relative min-h-screen">
+          <main id="main" tabIndex={-1} className="relative min-h-screen">
             {children}
           </main>
           <Analytics />
