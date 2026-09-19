@@ -12,6 +12,8 @@ import {
   Heart,
   Laptop
 } from "lucide-react"
+import { SectionHeader } from "@/components/ui/section-header"
+import { fadeUpItem, staggerContainer } from "@/lib/motion"
 
 const contactLinks = [
   {
@@ -35,26 +37,8 @@ const contactLinks = [
 ]
 
 export function ContactSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
+  const containerVariants = staggerContainer(0.2)
+  const itemVariants = fadeUpItem()
 
   return (
     <section id="contact" className="py-20">
@@ -62,20 +46,10 @@ export function ContactSection() {
         {/* Section Separator */}
         <hr className="my-12 border-t border-muted-foreground/20" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I&apos;m open to remote roles in AI training, LLM evaluation and Python
-            engineering — and to a conversation about anything on this page.
-          </p>
-        </motion.div>
+        <SectionHeader
+          title="Get in Touch"
+          subtitle="I&apos;m open to remote roles in AI training, LLM evaluation and Python engineering — and to a conversation about anything on this page."
+        />
 
         <motion.div
           variants={containerVariants}
@@ -86,9 +60,9 @@ export function ContactSection() {
         >
           <Card className="p-6 md:p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              {contactLinks.map((link, index) => (
+              {contactLinks.map((link) => (
                 <motion.div
-                  key={index}
+                  key={link.name}
                   variants={itemVariants}
                   className="flex"
                 >

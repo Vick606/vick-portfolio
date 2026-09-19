@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { FaGoogle, FaKaggle, FaLaptopCode, FaGraduationCap } from 'react-icons/fa';
+import { SectionHeader } from "@/components/ui/section-header";
+import { fadeUpItem, staggerContainer } from "@/lib/motion";
 
 const certifications = [
   {
@@ -62,43 +64,16 @@ const certifications = [
 ];
 
 export const CertificationsSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        when: "beforeChildren"
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1, y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
+  const containerVariants = staggerContainer(0.2, "beforeChildren");
+  const itemVariants = fadeUpItem();
 
   return (
     <section id="certifications" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">Certifications</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Courses I&apos;ve completed across AI, data science and software development.
-          </p>
-        </motion.div>
+        <SectionHeader
+          title="Certifications"
+          subtitle="Courses I&apos;ve completed across AI, data science and software development."
+        />
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
@@ -106,8 +81,8 @@ export const CertificationsSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {certifications.map((cert, index) => (
-            <motion.div key={index} variants={itemVariants}>
+          {certifications.map((cert) => (
+            <motion.div key={cert.courseName} variants={itemVariants}>
               <Card className="h-full p-4 hover:shadow-lg transition-shadow group">
                 <CardHeader className="p-0">
                   <div className="flex items-center gap-4 mb-4">
@@ -123,8 +98,8 @@ export const CertificationsSection = () => {
                 <CardContent className="p-0">
                   <h4 className="text-sm font-medium mb-2">Key Concepts:</h4>
                   <ul className="flex flex-wrap gap-2">
-                    {cert.keyConcepts.map((concept, idx) => (
-                      <li key={idx} className="text-xs bg-secondary px-2 py-1 rounded-full">
+                    {cert.keyConcepts.map((concept) => (
+                      <li key={concept} className="text-xs bg-secondary px-2 py-1 rounded-full">
                         {concept}
                       </li>
                     ))}
