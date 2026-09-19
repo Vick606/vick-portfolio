@@ -9,6 +9,8 @@ import {
   Wrench
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SectionHeader } from "@/components/ui/section-header";
+import { fadeUp, fadeUpItem, staggerContainer } from "@/lib/motion";
 
 // How the work gets done. These replace the previous ML / Data Science /
 // Analytics / Automation cards, which duplicated the Services section.
@@ -36,45 +38,16 @@ const principles = [
 ];
 
 export function AboutSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
+  const containerVariants = staggerContainer(0.15);
+  const itemVariants = fadeUpItem();
 
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">About</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
-        </motion.div>
+        <SectionHeader title="About" />
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          {...fadeUp}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="max-w-2xl mx-auto mb-14 space-y-4 text-muted-foreground"
         >
@@ -120,9 +93,7 @@ export function AboutSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          {...fadeUp}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 text-center"
         >

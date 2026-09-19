@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Brain, Code, Wrench } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { SectionHeader } from "@/components/ui/section-header";
+import { fadeUpItem, staggerContainer } from "@/lib/motion";
 
 // 24 skills down to 13. Percentages removed — when everything is rated 80-95%
 // the bars carry no information. Ordering does the positioning instead: the
@@ -42,44 +44,16 @@ const skillGroups = [
 ];
 
 export function SkillsSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut" as const
-      }
-    }
-  };
+  const containerVariants = staggerContainer(0.15);
+  const itemVariants = fadeUpItem("easeOut");
 
   return (
     <section id="skills" className="py-20">
       <div className="container relative mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">Skills</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Grouped by what they are for. The first group is where my five years went.
-          </p>
-        </motion.div>
+        <SectionHeader
+          title="Skills"
+          subtitle="Grouped by what they are for. The first group is where my five years went."
+        />
 
         <motion.div
           variants={containerVariants}
