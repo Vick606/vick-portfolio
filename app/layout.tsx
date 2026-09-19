@@ -1,18 +1,76 @@
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from './providers';
 import { Header } from '@/components/layout/header';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_URL,
+} from '@/lib/site';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Victor Koech | AI Training, LLM Evaluation & Python',
-  description:
-    'Five years in AI training, data annotation and Python. I build the tooling that makes AI evaluation reproducible.',
+export const metadata: Metadata = {
+  // Without this, Next.js cannot resolve the relative URLs below and emits no
+  // absolute `og:image` / canonical URL at all — the link preview silently
+  // renders as a bare URL with no card.
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    // Unused today (one page), but a child route that sets its own title picks
+    // this up instead of silently inheriting the full site title.
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  // Google ignores meta keywords entirely. Kept short and factual for the
+  // engines that still read them; every term is drawn from the locked
+  // positioning, nothing aspirational.
+  keywords: [
+    'AI training',
+    'LLM evaluation',
+    'data annotation',
+    'Python',
+    'AI evaluation',
+    'remote AI trainer',
+  ],
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.ico',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    locale: 'en_US',
+    url: '/',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    // `summary_large_image` promises a 1200x630 image. There isn't one yet, and
+    // a large card with no image looks worse than a compact one — so this stays
+    // `summary` until `app/opengraph-image.tsx` lands, then flips.
+    card: 'summary',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
